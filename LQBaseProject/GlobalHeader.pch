@@ -1,0 +1,41 @@
+//
+//  GlobalHeader.pch
+//  LQBaseProject
+//
+//  Created by YZR on 16/7/7.
+//  Copyright © 2016年 YZR. All rights reserved.
+//
+
+#ifndef GlobalHeader_pch
+#define GlobalHeader_pch
+
+#import "UIView+WSYToast.h" //弹出黑色小框
+
+
+/**   全局常量  **/
+#define kWindowWidth [UIScreen mainScreen].bounds.size.width
+#define kWindowHeight [UIScreen mainScreen].bounds.size.height
+
+
+/**   判断屏幕尺寸  **/
+//iPhone 4 / 4s
+#define  iPhone4_4s   (kWindowWidth == 320.f && kWindowHeight == 480.f ? YES : NO)
+//iPhone 5 / 5s /5c
+#define  iPhone5_5s   (kWindowWidth == 320.f && kWindowHeight == 568.f ? YES : NO)
+//iPhone 6
+#define  iPhone6      (kWindowWidth == 375.f && kWindowHeight == 667.f ? YES : NO)
+//iPhone 6_plus (只有6plus 才是@3x)
+#define  iPhone6_plus (kWindowWidth == 414.f && kWindowHeight == 736.f ? YES : NO)
+
+
+
+/**   判断是否是iOS7、8、9系统  */
+#define IOS7_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] < 8.0)
+#define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] < 9.0)
+#define IOS9_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] >= 9.0)
+
+
+
+
+
+#endif /* GlobalHeader_pch */
