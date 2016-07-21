@@ -33,6 +33,11 @@
 		7F041D121D2E468500028B74 /* applicationIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F041D101D2E468500028B74 /* applicationIcon@3x.png */; };
 		7F041D301D2E65E000028B74 /* OriBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F041D2E1D2E65E000028B74 /* OriBarCodeViewController.m */; };
 		7F041D311D2E65E000028B74 /* OriBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F041D2F1D2E65E000028B74 /* OriBarCodeViewController.xib */; };
+		7F3FCF281D3A29390082FD0B /* HandLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF1F1D3A29390082FD0B /* HandLockVC.m */; };
+		7F3FCF291D3A29390082FD0B /* HandLockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3FCF201D3A29390082FD0B /* HandLockVC.xib */; };
+		7F3FCF2A1D3A29390082FD0B /* LockBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF221D3A29390082FD0B /* LockBtn.m */; };
+		7F3FCF2B1D3A29390082FD0B /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF241D3A29390082FD0B /* LockView.m */; };
+		7F3FCF2C1D3A29390082FD0B /* GestureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF271D3A29390082FD0B /* GestureTableViewController.m */; };
 		7F687B0F1D2DED0F00B8530A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F687B0E1D2DED0F00B8530A /* main.m */; };
 		7F687B1B1D2DED0F00B8530A /* LQBaseProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F687B191D2DED0F00B8530A /* LQBaseProject.xcdatamodeld */; };
 		7F687B1D1D2DED0F00B8530A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F687B1C1D2DED0F00B8530A /* Assets.xcassets */; };
@@ -97,6 +102,8 @@
 		7F687C2B1D2DFB0600B8530A /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F687C291D2DFB0600B8530A /* WebViewController.xib */; };
 		7FADB98A1D2F995500B14104 /* HomeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADB9881D2F995500B14104 /* HomeScanViewController.m */; };
 		7FADB98B1D2F995500B14104 /* HomeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FADB9891D2F995500B14104 /* HomeScanViewController.xib */; };
+		7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0C1D4057B400445465 /* BAButton.m */; };
+		7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */; };
 		7FF47CA11D388AE9003A75AB /* SlideDeleteTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47C9B1D388AE9003A75AB /* SlideDeleteTableCell.m */; };
 		7FF47CA21D388AE9003A75AB /* SlideDeleteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF47C9C1D388AE9003A75AB /* SlideDeleteTableCell.xib */; };
 		7FF47CA31D388AE9003A75AB /* SlideDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47C9E1D388AE9003A75AB /* SlideDeleteViewController.m */; };
@@ -104,6 +111,7 @@
 		7FF47CB41D38A4F3003A75AB /* NSString+DocumentPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47CAF1D38A4F3003A75AB /* NSString+DocumentPath.m */; };
 		7FF47CB51D38A4F3003A75AB /* UIImage+StrethImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47CB21D38A4F3003A75AB /* UIImage+StrethImage.m */; };
 		7FF47CB81D38A50F003A75AB /* UIView+LQUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47CB71D38A50F003A75AB /* UIView+LQUIView.m */; };
+		7FF47CBB1D38B329003A75AB /* LQActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47CBA1D38B329003A75AB /* LQActivityIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +176,15 @@
 		7F041D2D1D2E65E000028B74 /* OriBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OriBarCodeViewController.h; sourceTree = "<group>"; };
 		7F041D2E1D2E65E000028B74 /* OriBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OriBarCodeViewController.m; sourceTree = "<group>"; };
 		7F041D2F1D2E65E000028B74 /* OriBarCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriBarCodeViewController.xib; sourceTree = "<group>"; };
+		7F3FCF1E1D3A29390082FD0B /* HandLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandLockVC.h; sourceTree = "<group>"; };
+		7F3FCF1F1D3A29390082FD0B /* HandLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandLockVC.m; sourceTree = "<group>"; };
+		7F3FCF201D3A29390082FD0B /* HandLockVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandLockVC.xib; sourceTree = "<group>"; };
+		7F3FCF211D3A29390082FD0B /* LockBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockBtn.h; sourceTree = "<group>"; };
+		7F3FCF221D3A29390082FD0B /* LockBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockBtn.m; sourceTree = "<group>"; };
+		7F3FCF231D3A29390082FD0B /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
+		7F3FCF241D3A29390082FD0B /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
+		7F3FCF261D3A29390082FD0B /* GestureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTableViewController.h; sourceTree = "<group>"; };
+		7F3FCF271D3A29390082FD0B /* GestureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTableViewController.m; sourceTree = "<group>"; };
 		7F687B0A1D2DED0F00B8530A /* LQBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LQBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F687B0E1D2DED0F00B8530A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F687B1A1D2DED0F00B8530A /* LQBaseProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LQBaseProject.xcdatamodel; sourceTree = "<group>"; };
@@ -291,6 +308,10 @@
 		7FADB9871D2F995500B14104 /* HomeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScanViewController.h; sourceTree = "<group>"; };
 		7FADB9881D2F995500B14104 /* HomeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScanViewController.m; sourceTree = "<group>"; };
 		7FADB9891D2F995500B14104 /* HomeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScanViewController.xib; sourceTree = "<group>"; };
+		7FDE9D0B1D4057B400445465 /* BAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
+		7FDE9D0C1D4057B400445465 /* BAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
+		7FDE9D0E1D4057EB00445465 /* BAButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButtonViewController.h; sourceTree = "<group>"; };
+		7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButtonViewController.m; sourceTree = "<group>"; };
 		7FF47C9A1D388AE9003A75AB /* SlideDeleteTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideDeleteTableCell.h; sourceTree = "<group>"; };
 		7FF47C9B1D388AE9003A75AB /* SlideDeleteTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideDeleteTableCell.m; sourceTree = "<group>"; };
 		7FF47C9C1D388AE9003A75AB /* SlideDeleteTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideDeleteTableCell.xib; sourceTree = "<group>"; };
@@ -303,6 +324,8 @@
 		7FF47CB21D38A4F3003A75AB /* UIImage+StrethImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StrethImage.m"; sourceTree = "<group>"; };
 		7FF47CB61D38A50F003A75AB /* UIView+LQUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LQUIView.h"; sourceTree = "<group>"; };
 		7FF47CB71D38A50F003A75AB /* UIView+LQUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LQUIView.m"; sourceTree = "<group>"; };
+		7FF47CB91D38B329003A75AB /* LQActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQActivityIndicatorView.h; sourceTree = "<group>"; };
+		7FF47CBA1D38B329003A75AB /* LQActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQActivityIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,6 +542,38 @@
 				7F041D2F1D2E65E000028B74 /* OriBarCodeViewController.xib */,
 			);
 			path = "系统生成";
+			sourceTree = "<group>";
+		};
+		7F3FCF0E1D3A27000082FD0B /* 手势解锁 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3FCF1D1D3A29390082FD0B /* 手势一 */,
+				7F3FCF251D3A29390082FD0B /* Host */,
+			);
+			path = "手势解锁";
+			sourceTree = "<group>";
+		};
+		7F3FCF1D1D3A29390082FD0B /* 手势一 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3FCF1E1D3A29390082FD0B /* HandLockVC.h */,
+				7F3FCF1F1D3A29390082FD0B /* HandLockVC.m */,
+				7F3FCF201D3A29390082FD0B /* HandLockVC.xib */,
+				7F3FCF211D3A29390082FD0B /* LockBtn.h */,
+				7F3FCF221D3A29390082FD0B /* LockBtn.m */,
+				7F3FCF231D3A29390082FD0B /* LockView.h */,
+				7F3FCF241D3A29390082FD0B /* LockView.m */,
+			);
+			path = "手势一";
+			sourceTree = "<group>";
+		};
+		7F3FCF251D3A29390082FD0B /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				7F3FCF261D3A29390082FD0B /* GestureTableViewController.h */,
+				7F3FCF271D3A29390082FD0B /* GestureTableViewController.m */,
+			);
+			path = Host;
 			sourceTree = "<group>";
 		};
 		7F687B011D2DED0F00B8530A = {
@@ -912,6 +967,8 @@
 		7F687BBF1D2DEFDF00B8530A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7FDE9D091D4057AD00445465 /* 按钮加图片布局 */,
+				7F3FCF0E1D3A27000082FD0B /* 手势解锁 */,
 				7FF47C8E1D38805B003A75AB /* cell滑动删除 */,
 				7F041CEF1D2E3DBF00028B74 /* 二维码生成 */,
 				7F041CCD1D2E388D00028B74 /* 二维码扫描 */,
@@ -1018,6 +1075,25 @@
 			path = "自定义扫描";
 			sourceTree = "<group>";
 		};
+		7FDE9D091D4057AD00445465 /* 按钮加图片布局 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDE9D0A1D4057B400445465 /* BAButton */,
+				7FDE9D0E1D4057EB00445465 /* BAButtonViewController.h */,
+				7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */,
+			);
+			path = "按钮加图片布局";
+			sourceTree = "<group>";
+		};
+		7FDE9D0A1D4057B400445465 /* BAButton */ = {
+			isa = PBXGroup;
+			children = (
+				7FDE9D0B1D4057B400445465 /* BAButton.h */,
+				7FDE9D0C1D4057B400445465 /* BAButton.m */,
+			);
+			path = BAButton;
+			sourceTree = "<group>";
+		};
 		7FF47C8E1D38805B003A75AB /* cell滑动删除 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1156,8 @@
 			children = (
 				7FF47CB61D38A50F003A75AB /* UIView+LQUIView.h */,
 				7FF47CB71D38A50F003A75AB /* UIView+LQUIView.m */,
+				7FF47CB91D38B329003A75AB /* LQActivityIndicatorView.h */,
+				7FF47CBA1D38B329003A75AB /* LQActivityIndicatorView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1191,6 +1269,7 @@
 				7F687B201D2DED0F00B8530A /* LaunchScreen.storyboard in Resources */,
 				7F041D121D2E468500028B74 /* applicationIcon@3x.png in Resources */,
 				7F687B1D1D2DED0F00B8530A /* Assets.xcassets in Resources */,
+				7F3FCF291D3A29390082FD0B /* HandLockVC.xib in Resources */,
 				7F687C2B1D2DFB0600B8530A /* WebViewController.xib in Resources */,
 				7F687BCF1D2DF01900B8530A /* ThirdViewController.xib in Resources */,
 				7FF47CA21D388AE9003A75AB /* SlideDeleteTableCell.xib in Resources */,
@@ -1235,6 +1314,7 @@
 				7F687B901D2DED3100B8530A /* Adapt.m in Sources */,
 				7FF47CA31D388AE9003A75AB /* SlideDeleteViewController.m in Sources */,
 				7F687C0C1D2DF13A00B8530A /* UIRefreshControl+AFNetworking.m in Sources */,
+				7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */,
 				7F687B9B1D2DED3100B8530A /* UIView+Frame.m in Sources */,
 				7F687B9D1D2DED3100B8530A /* UILabel+TextSpace.m in Sources */,
 				7F687BFF1D2DF13A00B8530A /* AFHTTPSessionManager.m in Sources */,
@@ -1243,14 +1323,18 @@
 				7F687C081D2DF13A00B8530A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7F041D021D2E432B00028B74 /* UIImage+RoundRectImage.m in Sources */,
 				7F687BAE1D2DEE4700B8530A /* BaseTableViewController.m in Sources */,
+				7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */,
 				7FF47CB51D38A4F3003A75AB /* UIImage+StrethImage.m in Sources */,
 				7F687C0A1D2DF13A00B8530A /* UIImageView+AFNetworking.m in Sources */,
 				7F041CC51D2E33EF00028B74 /* WSYToastView.m in Sources */,
+				7FF47CBB1D38B329003A75AB /* LQActivityIndicatorView.m in Sources */,
 				7F687C041D2DF13A00B8530A /* AFURLSessionManager.m in Sources */,
 				7F687C021D2DF13A00B8530A /* AFURLRequestSerialization.m in Sources */,
 				7F687B911D2DED3100B8530A /* NoticeView.m in Sources */,
+				7F3FCF2C1D3A29390082FD0B /* GestureTableViewController.m in Sources */,
 				7F687B8C1D2DED3100B8530A /* MyStr.m in Sources */,
 				7F041CE11D2E388D00028B74 /* TwoDimensionCodeViewController.m in Sources */,
+				7F3FCF2B1D3A29390082FD0B /* LockView.m in Sources */,
 				7F687C011D2DF13A00B8530A /* AFSecurityPolicy.m in Sources */,
 				7F687BA01D2DED3100B8530A /* NetWorking.m in Sources */,
 				7F687B9E1D2DED3100B8530A /* UITextField+MyPlace.m in Sources */,
@@ -1274,6 +1358,7 @@
 				7F687B0F1D2DED0F00B8530A /* main.m in Sources */,
 				7F687B951D2DED3100B8530A /* UIColor+helper.m in Sources */,
 				7F687C061D2DF13A00B8530A /* AFImageDownloader.m in Sources */,
+				7F3FCF281D3A29390082FD0B /* HandLockVC.m in Sources */,
 				7F687B9F1D2DED3100B8530A /* UIScrollView+Screen.m in Sources */,
 				7F041CAC1D2E33C600028B74 /* GuideUIView.m in Sources */,
 				7F041CF91D2E3E4500028B74 /* CreateCodeTableViewController.m in Sources */,
@@ -1282,6 +1367,7 @@
 				7F687B961D2DED3100B8530A /* UIImage+TCRendering.m in Sources */,
 				7F687C091D2DF13A00B8530A /* UIButton+AFNetworking.m in Sources */,
 				7F041CC31D2E33EF00028B74 /* UIView+Extension.m in Sources */,
+				7F3FCF2A1D3A29390082FD0B /* LockBtn.m in Sources */,
 				7F687B981D2DED3100B8530A /* HeaderSC.m in Sources */,
 				7F041CE51D2E388D00028B74 /* LXDTwoDimensionCodeVC.m in Sources */,
 				7F687BC41D2DEFFE00B8530A /* FisrtViewController.m in Sources */,
@@ -1441,7 +1527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/LQBaseProject/GlobalHeader.pch;
 				INFOPLIST_FILE = LQBaseProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruiec.LQBaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1456,7 +1542,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/LQBaseProject/GlobalHeader.pch;
 				INFOPLIST_FILE = LQBaseProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruiec.LQBaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

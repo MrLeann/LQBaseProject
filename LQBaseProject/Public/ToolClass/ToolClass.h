@@ -47,6 +47,18 @@
 +(BOOL)mJudgePassWordLegal:(NSString *) pass;
 
 
+/**
+ *   判断是否以字母开头
+ */
++(BOOL)mJudgeIsLetterFirst:(NSString *)str;
+
+
+/**
+ *   判断是否以中文开头
+ */
++(BOOL)mJudgeIsChineseFirst:(NSString *)str;
+
+
 
 /**
  *    NSString输入减一个字符

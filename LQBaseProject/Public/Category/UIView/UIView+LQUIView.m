@@ -10,8 +10,11 @@
 
 @implementation UIView (LQUIView)
 
+-(void)mToastShow{
+    
+//    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(100, 100, 60, 60)];
+//    
 
-
-
+}
 
 @end

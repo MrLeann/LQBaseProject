@@ -10,6 +10,8 @@
 @interface WSYToastView : UIView
 
 + (instancetype)toastWithString:(NSString *)string;
+
 - (void)finish;
+
 
 @end

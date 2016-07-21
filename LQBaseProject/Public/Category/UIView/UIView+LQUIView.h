@@ -10,7 +10,9 @@
 
 @interface UIView (LQUIView)
 
+//@property (strong,nonatomic)UIActivityIndicatorView *activityIndicator ;
 
+-(void)mToastShow;
 
 
 @end

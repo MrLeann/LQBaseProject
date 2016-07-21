@@ -12,6 +12,8 @@
 #import "TwoDimensionCodeViewController.h"
 #import "CreateCodeTableViewController.h"//二维码生成
 #import "SlideDeleteViewController.h"//cell滑动删除
+#import "GestureTableViewController.h"//手势解锁
+#import "BAButtonViewController.h"//图片按钮布局
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
 
@@ -21,7 +23,6 @@
 //表格控件
 @property (weak, nonatomic) IBOutlet UITableView *vTableView;
 @property(nonatomic,strong)NSArray *listTitleArr;
-
 
 
 @end
@@ -43,7 +44,7 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 - "];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -****",@"7 -****",@"8 -*****"];
     
     self.vTableView.rowHeight = 60;
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
@@ -79,7 +80,15 @@
     }else if (indexPath.row == 2){
         SlideDeleteViewController *vc = [SlideDeleteViewController new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 3){
+        GestureTableViewController *vc = [GestureTableViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 4){
+        //图片按钮布局类
+        BAButtonViewController *vc = [BAButtonViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
 }
 
 @end
