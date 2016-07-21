@@ -40,6 +40,7 @@
 //    btn.titleLabel.textAlignment = NSTextAlignmentRight;
 //    [self.view addSubview:btn];
     
+    
     /**   按钮二  */
     BACustomButton *btn1 = [BACustomButton BA_ShareButton];
     [btn1 setBackgroundColor:[UIColor greenColor]];
