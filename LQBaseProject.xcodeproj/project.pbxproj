@@ -102,8 +102,15 @@
 		7F687C2B1D2DFB0600B8530A /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F687C291D2DFB0600B8530A /* WebViewController.xib */; };
 		7FADB98A1D2F995500B14104 /* HomeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADB9881D2F995500B14104 /* HomeScanViewController.m */; };
 		7FADB98B1D2F995500B14104 /* HomeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FADB9891D2F995500B14104 /* HomeScanViewController.xib */; };
+		7FC454DA1D43012A0021700E /* WaveAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454D91D43012A0021700E /* WaveAnimationViewController.m */; };
+		7FC454DD1D4303DB0021700E /* WaveGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454DC1D4303DB0021700E /* WaveGraph.m */; };
+		7FC454E01D4306690021700E /* UIBezierPath+BasicShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454DF1D4306690021700E /* UIBezierPath+BasicShapes.m */; };
+		7FC454E51D430BEE0021700E /* UIBezierPathVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454E31D430BEE0021700E /* UIBezierPathVC.m */; };
+		7FC454E61D430BEE0021700E /* UIBezierPathVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC454E41D430BEE0021700E /* UIBezierPathVC.xib */; };
 		7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0C1D4057B400445465 /* BAButton.m */; };
 		7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */; };
+		7FDE9D151D4060CB00445465 /* DCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D141D4060CB00445465 /* DCLabel.m */; };
+		7FDE9D181D4060DE00445465 /* DCLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D171D4060DE00445465 /* DCLabelViewController.m */; };
 		7FF47CA11D388AE9003A75AB /* SlideDeleteTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47C9B1D388AE9003A75AB /* SlideDeleteTableCell.m */; };
 		7FF47CA21D388AE9003A75AB /* SlideDeleteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF47C9C1D388AE9003A75AB /* SlideDeleteTableCell.xib */; };
 		7FF47CA31D388AE9003A75AB /* SlideDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47C9E1D388AE9003A75AB /* SlideDeleteViewController.m */; };
@@ -308,10 +315,23 @@
 		7FADB9871D2F995500B14104 /* HomeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScanViewController.h; sourceTree = "<group>"; };
 		7FADB9881D2F995500B14104 /* HomeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScanViewController.m; sourceTree = "<group>"; };
 		7FADB9891D2F995500B14104 /* HomeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScanViewController.xib; sourceTree = "<group>"; };
+		7FC454D81D43012A0021700E /* WaveAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveAnimationViewController.h; sourceTree = "<group>"; };
+		7FC454D91D43012A0021700E /* WaveAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveAnimationViewController.m; sourceTree = "<group>"; };
+		7FC454DB1D4303DB0021700E /* WaveGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveGraph.h; sourceTree = "<group>"; };
+		7FC454DC1D4303DB0021700E /* WaveGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveGraph.m; sourceTree = "<group>"; };
+		7FC454DE1D4306690021700E /* UIBezierPath+BasicShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+BasicShapes.h"; sourceTree = "<group>"; };
+		7FC454DF1D4306690021700E /* UIBezierPath+BasicShapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+BasicShapes.m"; sourceTree = "<group>"; };
+		7FC454E21D430BEE0021700E /* UIBezierPathVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBezierPathVC.h; sourceTree = "<group>"; };
+		7FC454E31D430BEE0021700E /* UIBezierPathVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBezierPathVC.m; sourceTree = "<group>"; };
+		7FC454E41D430BEE0021700E /* UIBezierPathVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBezierPathVC.xib; sourceTree = "<group>"; };
 		7FDE9D0B1D4057B400445465 /* BAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
 		7FDE9D0C1D4057B400445465 /* BAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
 		7FDE9D0E1D4057EB00445465 /* BAButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButtonViewController.h; sourceTree = "<group>"; };
 		7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButtonViewController.m; sourceTree = "<group>"; };
+		7FDE9D131D4060CB00445465 /* DCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLabel.h; sourceTree = "<group>"; };
+		7FDE9D141D4060CB00445465 /* DCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLabel.m; sourceTree = "<group>"; };
+		7FDE9D161D4060DE00445465 /* DCLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLabelViewController.h; sourceTree = "<group>"; };
+		7FDE9D171D4060DE00445465 /* DCLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLabelViewController.m; sourceTree = "<group>"; };
 		7FF47C9A1D388AE9003A75AB /* SlideDeleteTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideDeleteTableCell.h; sourceTree = "<group>"; };
 		7FF47C9B1D388AE9003A75AB /* SlideDeleteTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideDeleteTableCell.m; sourceTree = "<group>"; };
 		7FF47C9C1D388AE9003A75AB /* SlideDeleteTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideDeleteTableCell.xib; sourceTree = "<group>"; };
@@ -931,6 +951,7 @@
 		7F687BBB1D2DEFDF00B8530A /* Item3 */ = {
 			isa = PBXGroup;
 			children = (
+				7FC454E11D430BD50021700E /* UIBezierPath画图 */,
 				7F687BBC1D2DEFDF00B8530A /* Host */,
 			);
 			path = Item3;
@@ -967,6 +988,8 @@
 		7F687BBF1D2DEFDF00B8530A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7FC454D71D4301050021700E /* 水波进度动画 */,
+				7FDE9D111D4060BF00445465 /* 字符串插入图片 */,
 				7FDE9D091D4057AD00445465 /* 按钮加图片布局 */,
 				7F3FCF0E1D3A27000082FD0B /* 手势解锁 */,
 				7FF47C8E1D38805B003A75AB /* cell滑动删除 */,
@@ -1075,6 +1098,29 @@
 			path = "自定义扫描";
 			sourceTree = "<group>";
 		};
+		7FC454D71D4301050021700E /* 水波进度动画 */ = {
+			isa = PBXGroup;
+			children = (
+				7FC454DE1D4306690021700E /* UIBezierPath+BasicShapes.h */,
+				7FC454DF1D4306690021700E /* UIBezierPath+BasicShapes.m */,
+				7FC454DB1D4303DB0021700E /* WaveGraph.h */,
+				7FC454DC1D4303DB0021700E /* WaveGraph.m */,
+				7FC454D81D43012A0021700E /* WaveAnimationViewController.h */,
+				7FC454D91D43012A0021700E /* WaveAnimationViewController.m */,
+			);
+			path = "水波进度动画";
+			sourceTree = "<group>";
+		};
+		7FC454E11D430BD50021700E /* UIBezierPath画图 */ = {
+			isa = PBXGroup;
+			children = (
+				7FC454E21D430BEE0021700E /* UIBezierPathVC.h */,
+				7FC454E31D430BEE0021700E /* UIBezierPathVC.m */,
+				7FC454E41D430BEE0021700E /* UIBezierPathVC.xib */,
+			);
+			path = "UIBezierPath画图";
+			sourceTree = "<group>";
+		};
 		7FDE9D091D4057AD00445465 /* 按钮加图片布局 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1092,6 +1138,25 @@
 				7FDE9D0C1D4057B400445465 /* BAButton.m */,
 			);
 			path = BAButton;
+			sourceTree = "<group>";
+		};
+		7FDE9D111D4060BF00445465 /* 字符串插入图片 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDE9D121D4060CB00445465 /* DCLabel */,
+				7FDE9D161D4060DE00445465 /* DCLabelViewController.h */,
+				7FDE9D171D4060DE00445465 /* DCLabelViewController.m */,
+			);
+			path = "字符串插入图片";
+			sourceTree = "<group>";
+		};
+		7FDE9D121D4060CB00445465 /* DCLabel */ = {
+			isa = PBXGroup;
+			children = (
+				7FDE9D131D4060CB00445465 /* DCLabel.h */,
+				7FDE9D141D4060CB00445465 /* DCLabel.m */,
+			);
+			path = DCLabel;
 			sourceTree = "<group>";
 		};
 		7FF47C8E1D38805B003A75AB /* cell滑动删除 */ = {
@@ -1277,6 +1342,7 @@
 				7F041CE21D2E388D00028B74 /* TwoDimensionCodeViewController.xib in Resources */,
 				7F687BAF1D2DEE4700B8530A /* BaseTableViewController.xib in Resources */,
 				7F687BD91D2DF0A300B8530A /* FourthViewController.xib in Resources */,
+				7FC454E61D430BEE0021700E /* UIBezierPathVC.xib in Resources */,
 				7F687BC51D2DEFFE00B8530A /* FisrtViewController.xib in Resources */,
 				7F041CE61D2E388D00028B74 /* LXDTwoDimensionCodeVC.xib in Resources */,
 				7F687BCA1D2DF00B00B8530A /* SecondViewController.xib in Resources */,
@@ -1348,17 +1414,21 @@
 				7F687C031D2DF13A00B8530A /* AFURLResponseSerialization.m in Sources */,
 				7F687B941D2DED3100B8530A /* colorModel.m in Sources */,
 				7F687C0D1D2DF13A00B8530A /* UIWebView+AFNetworking.m in Sources */,
+				7FC454E51D430BEE0021700E /* UIBezierPathVC.m in Sources */,
 				7F041CC41D2E33EF00028B74 /* UIView+WSYToast.m in Sources */,
 				7F687C2A1D2DFB0600B8530A /* WebViewController.m in Sources */,
 				7F687B8F1D2DED3100B8530A /* BlackView.m in Sources */,
 				7F687B8A1D2DED3100B8530A /* Animation.m in Sources */,
+				7FC454DD1D4303DB0021700E /* WaveGraph.m in Sources */,
 				7F687BB01D2DEE4700B8530A /* LQNavigationController.m in Sources */,
 				7F041CE41D2E388D00028B74 /* LXDScanView.m in Sources */,
 				7F687BA11D2DED3100B8530A /* TCLoadView.m in Sources */,
 				7F687B0F1D2DED0F00B8530A /* main.m in Sources */,
+				7FDE9D181D4060DE00445465 /* DCLabelViewController.m in Sources */,
 				7F687B951D2DED3100B8530A /* UIColor+helper.m in Sources */,
 				7F687C061D2DF13A00B8530A /* AFImageDownloader.m in Sources */,
 				7F3FCF281D3A29390082FD0B /* HandLockVC.m in Sources */,
+				7FC454DA1D43012A0021700E /* WaveAnimationViewController.m in Sources */,
 				7F687B9F1D2DED3100B8530A /* UIScrollView+Screen.m in Sources */,
 				7F041CAC1D2E33C600028B74 /* GuideUIView.m in Sources */,
 				7F041CF91D2E3E4500028B74 /* CreateCodeTableViewController.m in Sources */,
@@ -1377,6 +1447,7 @@
 				7F687BD81D2DF0A300B8530A /* FourthViewController.m in Sources */,
 				7FF47CB81D38A50F003A75AB /* UIView+LQUIView.m in Sources */,
 				7F687B991D2DED3100B8530A /* NavView.m in Sources */,
+				7FC454E01D4306690021700E /* UIBezierPath+BasicShapes.m in Sources */,
 				7F687C051D2DF13A00B8530A /* AFAutoPurgingImageCache.m in Sources */,
 				7F687B891D2DED3100B8530A /* MyLibraries.m in Sources */,
 				7F687B931D2DED3100B8530A /* Keyboard.m in Sources */,
@@ -1385,6 +1456,7 @@
 				7F687C001D2DF13A00B8530A /* AFNetworkReachabilityManager.m in Sources */,
 				7F687B9C1D2DED3100B8530A /* AdaptText.m in Sources */,
 				7F041D011D2E432B00028B74 /* UIImage+LXDCreateBarcode.m in Sources */,
+				7FDE9D151D4060CB00445465 /* DCLabel.m in Sources */,
 				7F041CE71D2E388D00028B74 /* TwoDimensionCodeOriginVC.m in Sources */,
 				7F041CC11D2E33EF00028B74 /* GlobalQueueOperation.m in Sources */,
 				7F687BC91D2DF00B00B8530A /* SecondViewController.m in Sources */,

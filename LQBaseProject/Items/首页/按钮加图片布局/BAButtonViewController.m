@@ -24,7 +24,7 @@
 
 //
 -(void)mInitUI{
-    
+     self.view.backgroundColor = [UIColor whiteColor];
 //    /**   按钮一  */
 //    BACustomButton *btn = [BACustomButton BA_ShareButton];
 //    btn.backgroundColor = [UIColor greenColor];;

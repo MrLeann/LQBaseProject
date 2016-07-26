@@ -34,7 +34,7 @@
     //
     NSArray *normalImgArr = [[NSArray alloc] initWithObjects:@"home1",@"red_noneselect",@"trade_noneselect",@"my_noneselect", nil];
     NSArray *selectImgArr = [[NSArray alloc] initWithObjects:@"home_select",@"red_select",@"trade_select",@"my_select", nil];
-    NSArray *titleArr = [[NSArray alloc] initWithObjects:@"主页",@"富文本",@"视频",@"音乐", nil];
+    NSArray *titleArr = [[NSArray alloc] initWithObjects:@"主页",@"富文本",@"动画",@"音乐", nil];
     NSArray *classNameArr = [[NSArray alloc] initWithObjects:@"FisrtViewController",@"SecondViewController",@"ThirdViewController",@"FourthViewController", nil];
     
     NSMutableArray *viewControllersArray = [[NSMutableArray alloc] init];

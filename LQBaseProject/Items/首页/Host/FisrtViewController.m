@@ -14,6 +14,8 @@
 #import "SlideDeleteViewController.h"//cell滑动删除
 #import "GestureTableViewController.h"//手势解锁
 #import "BAButtonViewController.h"//图片按钮布局
+#import "DCLabelViewController.h"//插入图片
+#import "WaveAnimationViewController.h"//水波动画
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
 
@@ -44,7 +46,7 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -****",@"7 -****",@"8 -*****"];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 -*****"];
     
     self.vTableView.rowHeight = 60;
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
@@ -70,25 +72,45 @@
 #pragma mark - cell点击
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
+        
         TwoDimensionCodeViewController *vc = [TwoDimensionCodeViewController new];
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 1){
+        
         CreateCodeTableViewController *vc2 = [CreateCodeTableViewController new];
         [self.navigationController pushViewController:vc2 animated:YES];
         
     }else if (indexPath.row == 2){
-        SlideDeleteViewController *vc = [SlideDeleteViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+        
+        SlideDeleteViewController *vc3 = [SlideDeleteViewController new];
+        [self.navigationController pushViewController:vc3 animated:YES];
     }else if (indexPath.row == 3){
-        GestureTableViewController *vc = [GestureTableViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+        
+        GestureTableViewController *vc4 = [GestureTableViewController new];
+        [self.navigationController pushViewController:vc4 animated:YES];
+        
     }else if (indexPath.row == 4){
+        
         //图片按钮布局类
-        BAButtonViewController *vc = [BAButtonViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+        BAButtonViewController *vc5 = [BAButtonViewController new];
+        [self.navigationController pushViewController:vc5 animated:YES];
+        
+    }else if (indexPath.row == 5){
+     
+        //插入图片
+        DCLabelViewController *vc6 = [DCLabelViewController new];
+        [self.navigationController pushViewController:vc6 animated:YES];
+        
+    }else if (indexPath.row == 6){
+        
+        //水波动画
+        WaveAnimationViewController *vc7 = [WaveAnimationViewController new];
+        [self.navigationController pushViewController:vc7 animated:YES];
     }
-    
 }
+
+
+
 
 @end
