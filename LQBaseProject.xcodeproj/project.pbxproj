@@ -38,6 +38,7 @@
 		7F3FCF2A1D3A29390082FD0B /* LockBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF221D3A29390082FD0B /* LockBtn.m */; };
 		7F3FCF2B1D3A29390082FD0B /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF241D3A29390082FD0B /* LockView.m */; };
 		7F3FCF2C1D3A29390082FD0B /* GestureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FCF271D3A29390082FD0B /* GestureTableViewController.m */; };
+		7F464A881D4C52DD00C16A31 /* CandlestickChartTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F464A871D4C52DD00C16A31 /* CandlestickChartTableVC.m */; };
 		7F687B0F1D2DED0F00B8530A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F687B0E1D2DED0F00B8530A /* main.m */; };
 		7F687B1B1D2DED0F00B8530A /* LQBaseProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F687B191D2DED0F00B8530A /* LQBaseProject.xcdatamodeld */; };
 		7F687B1D1D2DED0F00B8530A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F687B1C1D2DED0F00B8530A /* Assets.xcassets */; };
@@ -192,6 +193,8 @@
 		7F3FCF241D3A29390082FD0B /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
 		7F3FCF261D3A29390082FD0B /* GestureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTableViewController.h; sourceTree = "<group>"; };
 		7F3FCF271D3A29390082FD0B /* GestureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTableViewController.m; sourceTree = "<group>"; };
+		7F464A861D4C52DD00C16A31 /* CandlestickChartTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandlestickChartTableVC.h; sourceTree = "<group>"; };
+		7F464A871D4C52DD00C16A31 /* CandlestickChartTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandlestickChartTableVC.m; sourceTree = "<group>"; };
 		7F687B0A1D2DED0F00B8530A /* LQBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LQBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F687B0E1D2DED0F00B8530A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F687B1A1D2DED0F00B8530A /* LQBaseProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LQBaseProject.xcdatamodel; sourceTree = "<group>"; };
@@ -596,6 +599,15 @@
 			path = Host;
 			sourceTree = "<group>";
 		};
+		7F464A851D4C529400C16A31 /* K线图 */ = {
+			isa = PBXGroup;
+			children = (
+				7F464A861D4C52DD00C16A31 /* CandlestickChartTableVC.h */,
+				7F464A871D4C52DD00C16A31 /* CandlestickChartTableVC.m */,
+			);
+			path = "K线图";
+			sourceTree = "<group>";
+		};
 		7F687B011D2DED0F00B8530A = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +1000,7 @@
 		7F687BBF1D2DEFDF00B8530A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7F464A851D4C529400C16A31 /* K线图 */,
 				7FC454D71D4301050021700E /* 水波进度动画 */,
 				7FDE9D111D4060BF00445465 /* 字符串插入图片 */,
 				7FDE9D091D4057AD00445465 /* 按钮加图片布局 */,
@@ -1388,6 +1401,7 @@
 				7F687B921D2DED3100B8530A /* ForInView.m in Sources */,
 				7F687C081D2DF13A00B8530A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7F041D021D2E432B00028B74 /* UIImage+RoundRectImage.m in Sources */,
+				7F464A881D4C52DD00C16A31 /* CandlestickChartTableVC.m in Sources */,
 				7F687BAE1D2DEE4700B8530A /* BaseTableViewController.m in Sources */,
 				7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */,
 				7FF47CB51D38A4F3003A75AB /* UIImage+StrethImage.m in Sources */,

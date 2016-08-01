@@ -16,10 +16,10 @@
 #import "BAButtonViewController.h"//图片按钮布局
 #import "DCLabelViewController.h"//插入图片
 #import "WaveAnimationViewController.h"//水波动画
+#import "CandlestickChartTableVC.h"// K线图
+
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
-
-
 }
 
 //表格控件
@@ -46,7 +46,7 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 -*****"];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 "];
     
     self.vTableView.rowHeight = 60;
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
@@ -107,6 +107,10 @@
         //水波动画
         WaveAnimationViewController *vc7 = [WaveAnimationViewController new];
         [self.navigationController pushViewController:vc7 animated:YES];
+    }else if (indexPath.row == 7){
+        //K 线图
+        CandlestickChartTableVC *vc = [CandlestickChartTableVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
