@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kAdapt(a,b,c)  [Adapt FiveS_Up:@[@a,@b,@c]]
+
 @interface Adapt : UIView
 
 +(CGFloat)FiveS_Up:(NSArray *)arr;

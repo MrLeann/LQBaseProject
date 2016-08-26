@@ -11,12 +11,12 @@
 @implementation UITextField (MyPlace)
 -(void)myPlace:(NSString *)str color:(UIColor *)color width:(CGFloat)width
 {
-   
     self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:str attributes:@{NSForegroundColorAttributeName: color}];
     UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, width, self.frame.size.height)];
     self.leftView = leftView;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
+
 
 -(void)addTwo:(UIViewController *)vc tfChanged:(SEL)tfChanged tfClick:(SEL)tfClick
 {

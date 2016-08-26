@@ -64,7 +64,10 @@
     self.textColor = color;
     self.font = [UIFont systemFontOfSize:font];
     self.numberOfLines = 0;
-    self.backgroundColor = backColor;
+    if (backColor) {
+        self.backgroundColor = backColor;
+    }else self.backgroundColor = [UIColor clearColor];
+    
     if (index == 2) {
           self.textAlignment = NSTextAlignmentCenter;
     }else if (index == 3){

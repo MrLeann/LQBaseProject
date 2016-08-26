@@ -25,4 +25,38 @@
     return subArr;
 }
 
++(NSArray *)view:(UIView *)view
+{
+    
+    NSMutableArray *subArr = [[NSMutableArray alloc]init];
+    
+    for (id obj in view.subviews)  {  //遍历View
+        if ([obj isKindOfClass:[UIView class]]) {
+            UIView* v = (UIView*)obj;
+            [subArr addObject:v];
+        }
+    }
+    
+    return subArr;
+}
+
++(UIView *)setView:(UIView *)view tag:(NSInteger)tag
+{
+    UIView *vv = [[UIView alloc]init];
+    
+    for (id obj in view.subviews)  {  //遍历View
+        if ([obj isKindOfClass:[UIView class]]) {
+            UIView* v = (UIView*)obj;
+            
+            if (v.tag == tag) {
+                
+                vv = v;
+            }
+        }
+    }
+
+    
+    return vv;
+}
+
 @end

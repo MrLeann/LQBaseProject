@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PulldownRandomVC">
+            <connections>
+                <outlet property="vPulldownBtn" destination="czG-mO-EJs" id="7H0-Ui-5Xf"/>
+                <outlet property="vTableView" destination="fV4-1D-2is" id="HPL-MW-KgG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-1D-2is">
+                    <rect key="frame" x="0.0" y="200" width="320" height="368"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Kt7-YS-7dl"/>
+                        <outlet property="delegate" destination="-1" id="5FZ-sn-rqI"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czG-mO-EJs">
+                    <rect key="frame" x="15" y="136" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.66274509800000003" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="点击下拉">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="mPulldownClick:" destination="-1" eventType="touchUpInside" id="lwN-78-vya"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fV4-1D-2is" secondAttribute="trailing" id="O5F-IZ-a93"/>
+                <constraint firstAttribute="bottom" secondItem="fV4-1D-2is" secondAttribute="bottom" id="QEN-Jm-aPM"/>
+                <constraint firstItem="fV4-1D-2is" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="css-5H-xsb"/>
+                <constraint firstItem="fV4-1D-2is" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="dNO-83-eRS"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="35" y="278"/>
+        </view>
+    </objects>
+</document>

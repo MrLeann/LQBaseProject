@@ -96,6 +96,10 @@
 
 
 
+//下拉显示
++ (void)setOpenView:(UIView *)view time:(CGFloat)time height:(CGFloat)height;
+//上拉隐藏
++ (void)setCloseView:(UIView *)view time:(CGFloat)time height:(CGFloat)height;
 
 
 

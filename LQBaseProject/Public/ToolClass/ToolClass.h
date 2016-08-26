@@ -23,12 +23,14 @@
 /**
  *    获取路径
  */
+#pragma mark - 根据文件名获取路径
 +(NSString *)mGetLibraryCachesPath:(NSString *)fileName;
 
 
 /**
  *    删除NSString中特定字符
  */
+#pragma mark - 删除NSString中特定字符
 +(NSString *)mDeleteDesignatedString:(NSString *)str;
 
 
@@ -36,7 +38,7 @@
  *    判断字符串是否为空
  *    yes全部为空格，no不是
  */
-+(BOOL)mStringisEmpty:(NSString *)str;
++(BOOL)mJudgeStringisEmpty:(NSString *)str;
 
 
 /**
@@ -44,6 +46,7 @@
  *    是数字打印1，不是为0
  *    oc里面，ture和YES 是一样可以通过的目前没有明显的编译问题
  */
+#pragma mark - 判断 NSString是否为数字
 +(BOOL)mJudgePassWordLegal:(NSString *) pass;
 
 
@@ -56,7 +59,7 @@
 /**
  *   判断是否以中文开头
  */
-+(BOOL)mJudgeIsChineseFirst:(NSString *)str;
+//+(BOOL)mJudgeIsChineseFirst:(NSString *)str;
 
 
 
@@ -84,6 +87,7 @@
  *    字符串 删除所有空格 （能用）
  *    中间和两端
  */
+#pragma mark - 字符串 删除所有空格
 +(NSString *)mDeleteAllSpaceString:(NSString *)str;
 
 
@@ -96,7 +100,7 @@
  ** spacing:       虚线中短线之间的间距
  ** color:         虚线中短线的颜色
  */
-+ (UIView *)mCreateDashedLineWithFrame:(CGRect)lineFrame
++ (UIView *)mDrawDashedLineWithFrame:(CGRect)lineFrame
                             lineLength:(int)length
                            lineSpacing:(int)spacing
                              lineColor:(UIColor *)color;
@@ -141,7 +145,13 @@
  *
  *  defineWidth 是指压缩到高、宽 的最大值，200即200像素宽，同样200像素高
  */
+#pragma mark - 图片压缩指定尺寸
 +(UIImage *)mImageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
+
+
+
+
+
 
 
 @end

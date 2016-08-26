@@ -16,7 +16,7 @@
 #pragma mark - 自适应宽度
 +(CGFloat)setWith:(NSString *)string forFont:(NSInteger)fontIndex;
 
-+(CGFloat)setWith:(NSString *)string BoldFont:(NSInteger)BoldFontIndex;
++(CGFloat)setWith:(NSString *)string BoldFont:(NSInteger)BoldFontIndex;//加粗时的宽度
 
 +(CGFloat)setWith:(NSString *)string font:(UIFont *)font;
 

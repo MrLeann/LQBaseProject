@@ -11,4 +11,8 @@
 
 @interface ForInView : NSObject
 +(NSArray *)supView:(UIView *)supView;
+
+//+(NSArray *)view:(UIView *)view;
+
++(UIView *)setView:(UIView *)view tag:(NSInteger)tag;
 @end

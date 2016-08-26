@@ -16,4 +16,8 @@
 
 -(CGFloat)YaddH;
 
+-(void)setTopCorner:(CGFloat)corner;//上面2角切圆
+-(void)setBottomCorner:(CGFloat)corner; //下面2角切圆
+-(void)setAllCorner:(CGFloat)corner; //所有角切圆
+
 @end

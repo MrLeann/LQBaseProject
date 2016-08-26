@@ -10,7 +10,6 @@
 #import "AdaptText.h"
 #import "MyLibraries.h"
 
-
 @interface NoticeView()
 
 @end

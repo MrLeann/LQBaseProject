@@ -61,10 +61,39 @@
 }
 
 
+-(void)setHighlight
+{
+    [self addTarget:self action:@selector(highlight) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)highlight
+{
+    self.titleLabel.alpha = 0.5;
+    //延迟加载
+    [self performSelector:@selector(delayLoad) withObject:nil afterDelay:0.15];
+}
+
+-(void)delayLoad
+{
+    self.titleLabel.alpha = 1.0;
+}
 
 
-
-
+-(void)setLoadFont:(CGFloat)font
+{
+    CGFloat labelWidth = [self setWith:self.titleLabel.text forFont:font];
+    CGFloat imageWith = self.imageView.frame.size.width;
+    self.imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + 5, 0, -labelWidth);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWith - 5, 0, imageWith);
+    
+}
+#pragma mark - 自适应宽度
+-(CGFloat)setWith:(NSString *)string forFont:(NSInteger)fontIndex
+{
+    CGRect titleRect = [string boundingRectWithSize:CGSizeMake(10000, fontIndex + 10) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontIndex]} context:nil];
+    
+    return titleRect.size.width;
+}
 
 
 

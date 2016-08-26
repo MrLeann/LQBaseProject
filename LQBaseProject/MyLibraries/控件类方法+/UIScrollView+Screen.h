@@ -10,6 +10,6 @@
 
 @interface UIScrollView (Screen)
 
--(void)setScreen;
+-(void)setScreen:(UIViewController *)vc;
 
 @end

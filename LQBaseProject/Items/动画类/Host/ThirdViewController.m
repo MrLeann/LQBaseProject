@@ -8,6 +8,9 @@
 
 #import "ThirdViewController.h"
 #import "UIBezierPathVC.h"//绘制类
+#import "KLineTableVC.h"//K线图
+
+
 
 @interface ThirdViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_titleArray;
@@ -23,10 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _titleArray = @[@"UIBezierPath画图",@"----",@"----",@"---",@"---",@"---",@"---",@"---"];
-    
+    _titleArray = @[@"UIBezierPath画图",@"2 - K线图",@"----",@"---",@"---",@"---",@"---",@"---"];
     [self mInitUI];
     [self mInitTableView];
+
 }
 
 
@@ -54,8 +57,12 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
     cell.textLabel.text = [NSString stringWithFormat:@"第%ld行,%@",indexPath.row,_titleArray[indexPath.row]];
+    
+    cell.textLabel.font = [UIFont systemFontOfSize:13.0];
     
     //返回cell里面，点击无色设置
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -69,10 +76,11 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
         
-    
+        KLineTableVC *vc = [[KLineTableVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
 }
-
 
 
 

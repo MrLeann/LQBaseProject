@@ -17,7 +17,9 @@
 #import "DCLabelViewController.h"//插入图片
 #import "WaveAnimationViewController.h"//水波动画
 #import "CandlestickChartTableVC.h"// K线图
-
+#import "TableViewAnimationController.h"//表格效果
+#import "CountrySelectTableVC.h"//国家电话区号选择
+#import "PulldownHostVC.h"//下拉列表
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
 }
@@ -42,16 +44,22 @@
     
     //去掉尾部分割线
     self.vTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     //分割线偏移
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 "];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - ",@"13 - ",@"14 - "];
     
-    self.vTableView.rowHeight = 60;
+    //高度设置
+    self.vTableView.rowHeight = 40;
+    
+    
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
     
 }
+
+
 
 #pragma mark - 行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -62,6 +70,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",self.listTitleArr[indexPath.row]];
+    
+    
+    cell.textLabel.font = [UIFont systemFontOfSize:13.0];
     
     
     //返回cell里面，点击无色设置
@@ -108,13 +119,26 @@
         WaveAnimationViewController *vc7 = [WaveAnimationViewController new];
         [self.navigationController pushViewController:vc7 animated:YES];
     }else if (indexPath.row == 7){
+        
         //K 线图
         CandlestickChartTableVC *vc = [CandlestickChartTableVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 8){
+        
+        //表格效果
+        TableViewAnimationController *vc = [TableViewAnimationController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 9){
+        
+        //国家区号选择表格
+        CountrySelectTableVC *vc = [CountrySelectTableVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 10){
+        
+        PulldownHostVC *vc = [PulldownHostVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
-
-
 
 
 @end

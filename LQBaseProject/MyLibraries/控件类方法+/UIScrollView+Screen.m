@@ -10,10 +10,13 @@
 #import "MyLibraries.h"
 
 @implementation UIScrollView (Screen)
--(void)setScreen
+-(void)setScreen:(UIViewController *)vc;
 {
     self.contentSize = CGSizeMake(kWidth, kHeight + 1);
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
+    vc.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    [vc.view addSubview:self];
 }
 @end

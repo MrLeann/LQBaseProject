@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Exist : NSObject
+
 +(BOOL)arr:(NSArray *)arr;
 +(BOOL)str:(NSString *)str;
+
+
 @end

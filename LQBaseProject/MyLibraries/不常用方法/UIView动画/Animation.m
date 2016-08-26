@@ -7,6 +7,8 @@
 //
 
 #import "Animation.h"
+#import "dispatch_do.h"
+
 
 @implementation Animation
 
@@ -57,6 +59,29 @@
              
          }];
     }
+}
+
+//下拉显示
++ (void)setOpenView:(UIView *)view time:(CGFloat)time height:(CGFloat)height
+{
+    view.hidden = NO;
+    [UIView animateWithDuration:time animations:^{
+        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height);
+    }];
+}
+//上拉隐藏
++ (void)setCloseView:(UIView *)view time:(CGFloat)time height:(CGFloat)height
+{
+    [UIView animateWithDuration:time animations:^{
+        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height);
+    }];
+    
+    [dispatch_do delayTime:time doSome:^(id doSome) { //dispatch延迟
+        view.hidden = YES;
+    }];
+    
+
+    
 }
 
 

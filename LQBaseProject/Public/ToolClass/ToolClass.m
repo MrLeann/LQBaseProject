@@ -20,7 +20,11 @@
         return YES;
     }
     return NO;
+
+    
 }
+
+
 
 #pragma mark - mIsIphone5
 +(BOOL)mIsIphone5{
@@ -73,7 +77,7 @@
 
 #pragma mark -判断字符串内容是否全部为空格(能用),yes全部为空格，no不是
 //判断字符串内容是否全部为空格，yes全部为空格，no不是
-+(BOOL)mStringisEmpty:(NSString *) str {
++(BOOL)mJudgeStringisEmpty:(NSString *) str {
     
     if (!str) {
         return YES;
@@ -199,7 +203,7 @@
  ** spacing:       虚线中短线之间的间距
  ** color:         虚线中短线的颜色
  */
-+ (UIView *)mCreateDashedLineWithFrame:(CGRect)lineFrame
++ (UIView *)mDrawDashedLineWithFrame:(CGRect)lineFrame
                             lineLength:(int)length
                            lineSpacing:(int)spacing
                              lineColor:(UIColor *)color{
