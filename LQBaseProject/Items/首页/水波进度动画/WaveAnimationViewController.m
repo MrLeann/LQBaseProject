@@ -89,7 +89,7 @@
     
     
     //百分比label
-    NSInteger indexd = [self.scheduleStr floatValue] * 100;
+//    NSInteger indexd = [self.scheduleStr floatValue] * 100;
     lab = [[UILabel alloc]initWithFrame:waveView.frame];
 //    lab.text = [NSString stringWithFormat:@"  %02ld%%\n%@",indexd, arr[indexd/20]];//这个报错，为毛
     lab.numberOfLines = 0;

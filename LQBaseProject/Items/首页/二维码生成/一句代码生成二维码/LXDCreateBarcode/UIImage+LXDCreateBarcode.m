@@ -11,20 +11,20 @@
 
 @implementation UIImage (LXDCreateBarcode)
 
-/*!
+/*
  * @function imageOfQRFromURL:
  *
  * @abstract
  * 通过链接地址生成二维码图片
  */
-+ (UIImage *)imageOfQRFromURL: (NSString *)networkAddress
-{
++ (UIImage *)imageOfQRFromURL: (NSString *)networkAddress{
+    
     return [self imageOfQRFromURL: networkAddress codeSize: 100.0f red: 0 green: 0 blue: 0 insertImage: nil roundRadius: 0.f];
+
 }
 
-/*!
+/*
  * @function imageOfQRFromURL: codeSize:
- *
  * @abstract
  * 通过链接地址生成二维码图片并且设置二维码宽度
  */
@@ -60,14 +60,12 @@
                           red: (NSUInteger)red
                         green: (NSUInteger)green
                          blue: (NSUInteger)blue
-                  insertImage: (UIImage *)insertImage
-{
+                  insertImage: (UIImage *)insertImage{
     return [self imageOfQRFromURL: networkAddress codeSize: codeSize red: red green: green blue: blue insertImage: insertImage roundRadius: 0.f];
 }
 
-/*!
+/*
  * @function imageOfQRFromURL: codeSize: red: green: blue: insertImage: roundRadius:
- *
  * @abstract
  * 通过链接地址生成二维码图片以及设置二维码宽度和颜色，在二维码中间插入圆角图片
  */

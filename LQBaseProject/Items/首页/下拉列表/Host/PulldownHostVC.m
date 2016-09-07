@@ -13,7 +13,7 @@
 
 @interface PulldownHostVC (){
     NSArray *_titleArr;
-
+    NSString *strTest;
 }
 
 @end
@@ -66,6 +66,8 @@
         PulldownRandomVC *vc = [PulldownRandomVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
+        
+        
         
         
     }else if (indexPath.row == 2){

@@ -6,12 +6,12 @@
 
 
 #import "PulldownRandomVC.h"
-#import "LitBtnView.h"
-#import "LitBtnSc.h"
+//#import "LitBtnView.h"
+//#import "LitBtnSc.h"
 
 @interface PulldownRandomVC ()<UITableViewDelegate,UITableViewDataSource>{
     
-     LitBtnSc *lit;
+//     LitBtnSc *lit;
 
 }
 
@@ -72,18 +72,18 @@
 #pragma mark - 下拉点击
 - (IBAction)mPulldownClick:(UIButton *)sender {
     
-    NSArray *arr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+//    NSArray *arr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
 
-    lit = [[LitBtnSc alloc] initWithFrame:CGRectMake(20, 155, 100, 40)];
-    
-    [lit setScColor:[UIColor colorWithRed:255.0f/255.0 green:0 blue:0 alpha:1.0f] btnBackColor:[UIColor colorWithRed:0/255.0 green:255/255 blue:0 alpha:1.0f] btnSelectBackColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1.0f] btnTextColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] btnSelectTextColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] lineColor:[UIColor colorWithRed:0/255.0 green:255/255 blue:255/255 alpha:1.0f]];
-
-    
-    [lit setView:self.view arr:arr action:@selector(selectAction:) Alignment:1 selectIndex:0 space:10 font:16 vc:self delegateBtn:self.vPulldownBtn isTap:YES];
-    
-
-    
-    
+//    lit = [[LitBtnSc alloc] initWithFrame:CGRectMake(20, 155, 100, 40)];
+//    
+//    [lit setScColor:[UIColor colorWithRed:255.0f/255.0 green:0 blue:0 alpha:1.0f] btnBackColor:[UIColor colorWithRed:0/255.0 green:255/255 blue:0 alpha:1.0f] btnSelectBackColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1.0f] btnTextColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] btnSelectTextColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] lineColor:[UIColor colorWithRed:0/255.0 green:255/255 blue:255/255 alpha:1.0f]];
+//
+//    
+//    [lit setView:self.view arr:arr action:@selector(selectAction:) Alignment:1 selectIndex:0 space:10 font:16 vc:self delegateBtn:self.vPulldownBtn isTap:YES];
+//    
+//
+//    
+//    
     
 }
 

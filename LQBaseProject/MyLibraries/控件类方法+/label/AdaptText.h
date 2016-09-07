@@ -13,6 +13,8 @@
 
 #pragma mark - 自适应高度
 +(CGFloat)setHeight:(NSString *)string lineSpace:(CGFloat)lf paraSpace:(CGFloat)pf alignment:(NSInteger)index kerSpace:(CGFloat)ker font:(NSInteger)fontIndex toLeft:(CGFloat)toLeft toRight:(CGFloat)toRight;
+
+
 #pragma mark - 自适应宽度
 +(CGFloat)setWith:(NSString *)string forFont:(NSInteger)fontIndex;
 

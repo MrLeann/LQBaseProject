@@ -10,6 +10,8 @@
 #define GlobalHeader_pch
 
 #import "UIView+WSYToast.h" //弹出黑色小框
+#import "LQKit.h"//自己的LQKit
+
 
 
 /**   全局常量  **/
@@ -34,6 +36,22 @@
 #define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] < 9.0)
 #define IOS9_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] >= 9.0)
 
+
+
+/**
+ *   调试类
+ */
+
+#ifdef DEBUG
+#define TCLog(...)  NSLog(__VA_ARGS__)
+
+#else
+#define TCLog(...)
+#endif
+
+#define  RGBColor(r, g, b)   [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define  NavPush(vc, s)     [s.navigationController pushViewController:[[vc alloc]init] animated:YES];
 
 
 

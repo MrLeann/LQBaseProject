@@ -36,8 +36,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self mTableViewSetting];
+    self.title = @"首页";
     
+     //
+    [self mTableViewSetting];
 }
 
 -(void)mTableViewSetting{
@@ -49,17 +51,14 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - ",@"13 - ",@"14 - "];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - ",@"13 - ",@"14 - "];
     
     //高度设置
     self.vTableView.rowHeight = 40;
     
-    
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
     
 }
-
-
 
 #pragma mark - 行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

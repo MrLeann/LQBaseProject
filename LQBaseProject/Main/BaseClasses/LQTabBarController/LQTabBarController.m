@@ -8,8 +8,6 @@
 
 #import "LQTabBarController.h"
 #import "LQNavigationController.h"
-#import "UIImage+TCRendering.h"//图片渲染
-
 #import "FisrtViewController.h"//主页
 #import "SecondViewController.h"//交易
 #import "ThirdViewController.h"

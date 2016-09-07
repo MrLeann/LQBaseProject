@@ -53,9 +53,9 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     
     
-    NSString *bj =@"[[1, -9], [2, 1], [3, 12], [4, 20],[5, 26], [6, 30], [7, 32], [8, 29],[9, 22], [10, 12], [11, 0], [12, -6]]";// First data series
-    
-    NSString *sz = @"[[1, 15], [2, 16], [3, 19], [4, 22],[5, 26], [6, 27], [7, 28], [8, 28],[9, 27], [10, 25], [11, 20], [12, 16]]";
+//    NSString *bj =@"[[1, -9], [2, 1], [3, 12], [4, 20],[5, 26], [6, 30], [7, 32], [8, 29],[9, 22], [10, 12], [11, 0], [12, -6]]";// First data series
+//    
+//    NSString *sz = @"[[1, 15], [2, 16], [3, 19], [4, 22],[5, 26], [6, 27], [7, 28], [8, 28],[9, 27], [10, 25], [11, 20], [12, 16]]";
     
     JSContext *context = [self.vWebView  valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
