@@ -127,6 +127,13 @@
 		7FBD8E991D7F9D2E008180F1 /* BarCodeHostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8E971D7F9D2E008180F1 /* BarCodeHostVC.m */; };
 		7FBD8E9A1D7F9D2E008180F1 /* BarCodeHostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FBD8E981D7F9D2E008180F1 /* BarCodeHostVC.xib */; };
 		7FBD8EA01D7FA15A008180F1 /* NSObject+LQAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8E9F1D7FA15A008180F1 /* NSObject+LQAdd.m */; };
+		7FBD8EA31D7FF076008180F1 /* colorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EA21D7FF076008180F1 /* colorModel.m */; };
+		7FBD8EAB1D7FF650008180F1 /* getData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EA61D7FF650008180F1 /* getData.m */; };
+		7FBD8EAC1D7FF650008180F1 /* lines.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EA81D7FF650008180F1 /* lines.m */; };
+		7FBD8EB01D7FFAED008180F1 /* RKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EAF1D7FFAED008180F1 /* RKLineView.m */; };
+		7FBD8EDD1D8005AA008180F1 /* LineGraphHostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EDC1D8005AA008180F1 /* LineGraphHostVC.m */; };
+		7FBD8EE11D800613008180F1 /* LineGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8EDF1D800613008180F1 /* LineGraphVC.m */; };
+		7FBD8EE21D800613008180F1 /* LineGraphVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FBD8EE01D800613008180F1 /* LineGraphVC.xib */; };
 		7FC454DA1D43012A0021700E /* WaveAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454D91D43012A0021700E /* WaveAnimationViewController.m */; };
 		7FC454DD1D4303DB0021700E /* WaveGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454DC1D4303DB0021700E /* WaveGraph.m */; };
 		7FC454E01D4306690021700E /* UIBezierPath+BasicShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC454DF1D4306690021700E /* UIBezierPath+BasicShapes.m */; };
@@ -370,6 +377,19 @@
 		7FBD8E981D7F9D2E008180F1 /* BarCodeHostVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarCodeHostVC.xib; sourceTree = "<group>"; };
 		7FBD8E9E1D7FA15A008180F1 /* NSObject+LQAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LQAdd.h"; sourceTree = "<group>"; };
 		7FBD8E9F1D7FA15A008180F1 /* NSObject+LQAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LQAdd.m"; sourceTree = "<group>"; };
+		7FBD8EA11D7FF076008180F1 /* colorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorModel.h; sourceTree = "<group>"; };
+		7FBD8EA21D7FF076008180F1 /* colorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorModel.m; sourceTree = "<group>"; };
+		7FBD8EA51D7FF650008180F1 /* getData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getData.h; sourceTree = "<group>"; };
+		7FBD8EA61D7FF650008180F1 /* getData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getData.m; sourceTree = "<group>"; };
+		7FBD8EA71D7FF650008180F1 /* lines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lines.h; sourceTree = "<group>"; };
+		7FBD8EA81D7FF650008180F1 /* lines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lines.m; sourceTree = "<group>"; };
+		7FBD8EAE1D7FFAED008180F1 /* RKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKLineView.h; sourceTree = "<group>"; };
+		7FBD8EAF1D7FFAED008180F1 /* RKLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKLineView.m; sourceTree = "<group>"; };
+		7FBD8EDB1D8005AA008180F1 /* LineGraphHostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphHostVC.h; sourceTree = "<group>"; };
+		7FBD8EDC1D8005AA008180F1 /* LineGraphHostVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphHostVC.m; sourceTree = "<group>"; };
+		7FBD8EDE1D800613008180F1 /* LineGraphVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphVC.h; sourceTree = "<group>"; };
+		7FBD8EDF1D800613008180F1 /* LineGraphVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphVC.m; sourceTree = "<group>"; };
+		7FBD8EE01D800613008180F1 /* LineGraphVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineGraphVC.xib; sourceTree = "<group>"; };
 		7FC454D81D43012A0021700E /* WaveAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveAnimationViewController.h; sourceTree = "<group>"; };
 		7FC454D91D43012A0021700E /* WaveAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveAnimationViewController.m; sourceTree = "<group>"; };
 		7FC454DB1D4303DB0021700E /* WaveGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveGraph.h; sourceTree = "<group>"; };
@@ -837,6 +857,8 @@
 		7F4D8D221D7EC068007D3C9A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7FBD8EA11D7FF076008180F1 /* colorModel.h */,
+				7FBD8EA21D7FF076008180F1 /* colorModel.m */,
 				7F4D8D2A1D7EC6EA007D3C9A /* UIImage+LQAdd.h */,
 				7F4D8D2B1D7EC6EA007D3C9A /* UIImage+LQAdd.m */,
 				7F4D8D241D7EC161007D3C9A /* UIColor+LQAdd.h */,
@@ -1125,10 +1147,11 @@
 		7F6F0E3D1D6C57B700B227B7 /* 动画类 */ = {
 			isa = PBXGroup;
 			children = (
+				7FBD8ED51D80035F008180F1 /* 折线图 */,
 				7F2F1E341D6D7A41005FD62A /* 常见动画 */,
-				7F6F0E3E1D6C57B700B227B7 /* Host */,
 				7F6F0E421D6C57B700B227B7 /* K线图 */,
 				7F6F0E5C1D6C57B700B227B7 /* UIBezierPath画图 */,
+				7F6F0E3E1D6C57B700B227B7 /* Host */,
 			);
 			path = "动画类";
 			sourceTree = "<group>";
@@ -1189,19 +1212,12 @@
 		7F6F0E4F1D6C57B700B227B7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F6F0E501D6C57B700B227B7 /* KlineCasses */,
+				7FBD8EA41D7FF63D008180F1 /* KLineModel */,
 				7F6F0E571D6C57B700B227B7 /* KLineTableFirstVC.h */,
 				7F6F0E581D6C57B700B227B7 /* KLineTableFirstVC.m */,
 				7F6F0E591D6C57B700B227B7 /* KLineTableFirstVC.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		7F6F0E501D6C57B700B227B7 /* KlineCasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = KlineCasses;
 			sourceTree = "<group>";
 		};
 		7F6F0E5A1D6C57B700B227B7 /* Model */ = {
@@ -1325,6 +1341,47 @@
 				7FBD8E981D7F9D2E008180F1 /* BarCodeHostVC.xib */,
 			);
 			path = "二维码和条形码";
+			sourceTree = "<group>";
+		};
+		7FBD8EA41D7FF63D008180F1 /* KLineModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FBD8EA51D7FF650008180F1 /* getData.h */,
+				7FBD8EA61D7FF650008180F1 /* getData.m */,
+				7FBD8EA71D7FF650008180F1 /* lines.h */,
+				7FBD8EA81D7FF650008180F1 /* lines.m */,
+				7FBD8EAE1D7FFAED008180F1 /* RKLineView.h */,
+				7FBD8EAF1D7FFAED008180F1 /* RKLineView.m */,
+			);
+			path = KLineModel;
+			sourceTree = "<group>";
+		};
+		7FBD8ED51D80035F008180F1 /* 折线图 */ = {
+			isa = PBXGroup;
+			children = (
+				7FBD8ED91D8005AA008180F1 /* Demo1 */,
+				7FBD8EDA1D8005AA008180F1 /* Host */,
+			);
+			path = "折线图";
+			sourceTree = "<group>";
+		};
+		7FBD8ED91D8005AA008180F1 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				7FBD8EDE1D800613008180F1 /* LineGraphVC.h */,
+				7FBD8EDF1D800613008180F1 /* LineGraphVC.m */,
+				7FBD8EE01D800613008180F1 /* LineGraphVC.xib */,
+			);
+			path = Demo1;
+			sourceTree = "<group>";
+		};
+		7FBD8EDA1D8005AA008180F1 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				7FBD8EDB1D8005AA008180F1 /* LineGraphHostVC.h */,
+				7FBD8EDC1D8005AA008180F1 /* LineGraphHostVC.m */,
+			);
+			path = Host;
 			sourceTree = "<group>";
 		};
 		7FC454D71D4301050021700E /* 水波进度动画 */ = {
@@ -1538,6 +1595,7 @@
 				7F041CE61D2E388D00028B74 /* LXDTwoDimensionCodeVC.xib in Resources */,
 				7F939E801D576445008FC23E /* evt_phone_area_code_zh.txt in Resources */,
 				7F041D0E1D2E450200028B74 /* whiteBG@2x.png in Resources */,
+				7FBD8EE21D800613008180F1 /* LineGraphVC.xib in Resources */,
 				7F4D8CED1D7EA0E2007D3C9A /* Localizable.strings in Resources */,
 				7F041D0D1D2E450200028B74 /* picture@2x.png in Resources */,
 				7F041CE81D2E388D00028B74 /* TwoDimensionCodeOriginVC.xib in Resources */,
@@ -1592,6 +1650,7 @@
 				7F464A881D4C52DD00C16A31 /* CandlestickChartTableVC.m in Sources */,
 				7F687BAE1D2DEE4700B8530A /* BaseTableViewController.m in Sources */,
 				7F3139A91D4F3B1600B11861 /* TableViewAnimationController.m in Sources */,
+				7FBD8EDD1D8005AA008180F1 /* LineGraphHostVC.m in Sources */,
 				7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */,
 				7F687C0A1D2DF13A00B8530A /* UIImageView+AFNetworking.m in Sources */,
 				7F4D8D201D7EC01E007D3C9A /* ToolClass.m in Sources */,
@@ -1630,6 +1689,7 @@
 				7FC454DA1D43012A0021700E /* WaveAnimationViewController.m in Sources */,
 				7F4D8D171D7EC01E007D3C9A /* GlobalQueueOperation.m in Sources */,
 				7F041CAC1D2E33C600028B74 /* GuideUIView.m in Sources */,
+				7FBD8EB01D7FFAED008180F1 /* RKLineView.m in Sources */,
 				7F041CF91D2E3E4500028B74 /* CreateCodeTableViewController.m in Sources */,
 				7F6F0E671D6C57B700B227B7 /* KLineTableVC.m in Sources */,
 				7F687C091D2DF13A00B8530A /* UIButton+AFNetworking.m in Sources */,
@@ -1644,10 +1704,13 @@
 				7F6F0E711D6C57B700B227B7 /* KLineTableFirstVC.m in Sources */,
 				7F687BB61D2DEE7B00B8530A /* AppDelegate.m in Sources */,
 				7FC454E01D4306690021700E /* UIBezierPath+BasicShapes.m in Sources */,
+				7FBD8EAC1D7FF650008180F1 /* lines.m in Sources */,
+				7FBD8EA31D7FF076008180F1 /* colorModel.m in Sources */,
 				7F2F1EA01D6D7E9D005FD62A /* UIView+Blast.m in Sources */,
 				7F2F1E381D6D7A95005FD62A /* NormalAnimationVC.m in Sources */,
 				7FBD8E951D7F9CD2008180F1 /* CreatQRCodeAndBarCodeFromLeon.m in Sources */,
 				7F4D8D431D7EE6F3007D3C9A /* CHUserDataManager.m in Sources */,
+				7FBD8EAB1D7FF650008180F1 /* getData.m in Sources */,
 				7F687C051D2DF13A00B8530A /* AFAutoPurgingImageCache.m in Sources */,
 				7F687BB11D2DEE4700B8530A /* LQTabBarController.m in Sources */,
 				7FF47CA11D388AE9003A75AB /* SlideDeleteTableCell.m in Sources */,
@@ -1655,6 +1718,7 @@
 				7F4D8D421D7EE6F3007D3C9A /* CHKeychain.m in Sources */,
 				7F041D011D2E432B00028B74 /* UIImage+LXDCreateBarcode.m in Sources */,
 				7F4764781D507768003AD4CD /* MyFoldViewController.m in Sources */,
+				7FBD8EE11D800613008180F1 /* LineGraphVC.m in Sources */,
 				7FDE9D151D4060CB00445465 /* DCLabel.m in Sources */,
 				7F4D8D2F1D7EC9FB007D3C9A /* UIView+LQAdd.m in Sources */,
 				7F4D8D291D7EC645007D3C9A /* NSString+LQAdd.m in Sources */,

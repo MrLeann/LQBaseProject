@@ -144,7 +144,10 @@
  *  space 应该是nsstring距离label 的边界距离（toast传的是5）
  */
 #pragma mark - 根据字符的宽度返回所在屏幕的高度
-+(CGSize)mCalculateVerticalSize:(NSString *)labelText postLabelMaxWidth:(CGFloat)postLabelMaxWidth font:(UIFont*)font defaultSpace:(CGFloat)space ;
++(CGSize)mCalculateVerticalSize:(NSString *)labelText
+              postLabelMaxWidth:(CGFloat)postLabelMaxWidth
+                           font:(UIFont*)font
+                   defaultSpace:(CGFloat)space ;
 
 /**
  *  图片压缩到指定像素尺寸
@@ -152,7 +155,8 @@
  *  defineWidth 是指压缩到高、宽 的最大值，200即200像素宽，同样200像素高
  */
 #pragma mark - 图片压缩指定尺寸
-+(UIImage *)mImageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
++(UIImage *)mImageCompressForWidth:(UIImage *)sourceImage
+                       targetWidth:(CGFloat)defineWidth;
 
 
 /**
@@ -166,7 +170,8 @@
  *   字符串中是否包含某个字符串
  */
 #pragma mark - 字符串中是否包含某个字符串
-+(BOOL)mContainSpecifiedCharacterInString:(NSString *)str Character:(NSString *)charStr;
++(BOOL)mContainSpecifiedCharacterInString:(NSString *)str
+                                Character:(NSString *)charStr;
 
 /**
  *  返回文件目录
@@ -177,7 +182,8 @@
 
 
 #pragma mark - 缓存数组
-+(NSMutableArray *)initWithArr:(NSArray *)arr andKeyArr:(NSArray *)keyArr;
++(NSMutableArray *)initWithArr:(NSArray *)arr
+                     andKeyArr:(NSArray *)keyArr;
 
 
 #pragma mark - 遍历View里面的 UIButton 按钮控件
@@ -189,7 +195,8 @@
 
 
 #pragma mark - 根据tag值获取UIView里面的指定View视图
-+(UIView *)mTraversalViewInView:(UIView *)view withTag:(NSInteger)tag;
++(UIView *)mTraversalViewInView:(UIView *)view
+                        withTag:(NSInteger)tag;
 
 
 #pragma mark - 获取随机字符串(英文)
@@ -200,6 +207,31 @@
 +(CGFloat)mAdapt320and375and41Screen:(NSArray *)arr;
 
 
+#pragma mark 字符串转换为日期时间对象
++(NSDate*)mDateFromString:(NSString*)str;
+
+
+#pragma mark - 不知道什么功能
++(bool)isEqualWithFloat:(float)f1 float2:(float)f2 absDelta:(int)absDelta;
+
+
+#pragma mark - 根据Key值 获取NSUserDefault 对象
++(NSObject *)mGetUserDefaults:(NSString *) name;
+
+
+#pragma mark - 设置NSUserDefault 对象
++(void)mSetUserDefaults:(NSObject *) defaults
+                 forKey:(NSString *) key;
+
+
+
+#pragma mark - 数值根据大小变成万、亿的字符串
++(NSString*)mChangePrice:(CGFloat)price;
+
+
+
+#pragma mark - MD5 16位加密
++ (NSString *)md5HexDigest:(NSString*)password;
 
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "Animation.h"
-#import "dispatch_do.h"
+//#import "dispatch_do.h"
 
 
 @implementation Animation
@@ -69,30 +69,24 @@
         view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height);
     }];
 }
+
 //上拉隐藏
-+ (void)setCloseView:(UIView *)view time:(CGFloat)time height:(CGFloat)height
-{
++(void)setCloseView:(UIView *)view time:(CGFloat)time height:(CGFloat)height{
+    
     [UIView animateWithDuration:time animations:^{
         view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height);
     }];
     
-    [dispatch_do delayTime:time doSome:^(id doSome) { //dispatch延迟
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         view.hidden = YES;
-    }];
-    
-
-    
+    });
 }
 
-
-
 //弹簧位移动画
-+(void)setTanView:(UIView *)view time:(CGFloat)time tan:(CGFloat)tan centerX:(CGFloat)centerX centerY:(CGFloat)centerY
-{
++(void)setTanView:(UIView *)view time:(CGFloat)time tan:(CGFloat)tan centerX:(CGFloat)centerX centerY:(CGFloat)centerY{
+    
     [UIView animateWithDuration:time delay:0 usingSpringWithDamping:tan initialSpringVelocity:0 options:0 animations:^{
-        
         view.center = CGPointMake(centerX, centerY);
-        
     } completion:nil];
 }
 

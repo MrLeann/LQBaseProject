@@ -6,6 +6,8 @@
 //  Copyright © 2015年 macHY. All rights reserved.
 
 #import "ToolClass.h"
+#import <CommonCrypto/CommonDigest.h>//下面
+
 
 @implementation ToolClass
 
@@ -460,6 +462,80 @@
     }
     return afloat;
     
+}
+
+
+#pragma mark 字符串转换为日期时间对象
++(NSDate*)mDateFromString:(NSString*)str{
+
+    // 创建一个时间格式化对象
+    NSDateFormatter *datef = [[NSDateFormatter alloc] init];
+    // 设定时间的格式
+    [datef setDateFormat:@"yyyy-MM-dd"];
+    // 将字符串转换为时间对象
+    NSDate *tempDate = [datef dateFromString:str];
+    return tempDate;
+}
+
+
+#pragma mark - 不知道什么功能
++(bool)isEqualWithFloat:(float)f1 float2:(float)f2 absDelta:(int)absDelta{
+    int i1, i2;
+    i1 = (f1>0) ? ((int)f1) : ((int)f1 - 0x80000000);
+    i2 = (f2>0) ? ((int)f2)  : ((int)f2 - 0x80000000);
+    return ((abs(i1-i2))<absDelta) ? true : false;
+}
+
+
+#pragma mark - 根据Key值 获取NSUserDefault 对象
++(NSObject *)mGetUserDefaults:(NSString *) name{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:name];
+}
+
+
+#pragma mark - 设置NSUserDefault 对象
++(void)mSetUserDefaults:(NSObject *)defaults forKey:(NSString *) key{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:defaults forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
+#pragma mark - 数值根据大小变成万、亿的字符串
++(NSString*)mChangePrice:(CGFloat)price{
+    
+    CGFloat newPrice = 0;
+    NSString *danwei = @"万";
+    if ((int)price>10000) {
+        newPrice = price / 10000 ;
+    }
+    if ((int)price>10000000) {
+        newPrice = price / 10000000 ;
+        danwei = @"千万";
+    }
+    if ((int)price>100000000) {
+        newPrice = price / 100000000 ;
+        danwei = @"亿";
+    }
+    NSString *newstr = [[NSString alloc] initWithFormat:@"%.0f%@",newPrice,danwei];
+    return newstr;
+}
+
+#pragma mark - MD5 16位加密
+// MD5 16位加密
++ (NSString *)md5HexDigest:(NSString*)password
+{
+    const char *original_str = [password UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(original_str, strlen(original_str), result);
+    NSMutableString *hash = [NSMutableString string];
+    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+    {
+        [hash appendFormat:@"%02X", result[i]];
+    }
+    NSString *mdfiveString = [hash lowercaseString];
+    return mdfiveString;
 }
 
 

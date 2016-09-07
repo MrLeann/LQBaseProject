@@ -11,6 +11,7 @@
 
 @implementation UIImage (LXDCreateBarcode)
 
+
 /*
  * @function imageOfQRFromURL:
  *

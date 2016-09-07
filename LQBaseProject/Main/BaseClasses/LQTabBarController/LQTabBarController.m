@@ -47,8 +47,8 @@
 //        nav.navigationItem.title = titleArr[i];
         nav.tabBarItem.title = titleArr[i];
         
-        nav.tabBarItem.image = [[UIImage imageNamed:normalImgArr[i]] originalImage];
-        nav.tabBarItem.selectedImage = [[UIImage imageNamed:selectImgArr[i]] originalImage];
+        nav.tabBarItem.image = [[UIImage imageNamed:normalImgArr[i]] mOriginalImage];
+        nav.tabBarItem.selectedImage = [[UIImage imageNamed:selectImgArr[i]] mOriginalImage];
         
         //设置tabBar的整个背景颜色
         self.tabBar.barTintColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];

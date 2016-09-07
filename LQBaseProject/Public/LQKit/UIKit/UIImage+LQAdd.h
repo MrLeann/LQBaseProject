@@ -11,10 +11,10 @@
 @interface UIImage (LQAdd)
 
 #pragma mark - 方法一：
-+ (instancetype)originalRenderingImageWithName:(NSString *)imageName;
++ (instancetype)mOriginalRenderingImageWithName:(NSString *)imageName;
 
 #pragma mark - 方法二：
-- (instancetype)originalImage;
+- (instancetype)mOriginalImage;
 
 
 //对图片中间部分拉伸，周围保持不变

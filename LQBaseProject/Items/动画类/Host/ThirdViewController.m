@@ -9,7 +9,7 @@
 #import "ThirdViewController.h"
 #import "UIBezierPathVC.h"//绘制类
 #import "KLineTableVC.h"//K线图
-
+#import "LineGraphHostVC.h"//折线图
 
 
 @interface ThirdViewController ()<UITableViewDelegate,UITableViewDataSource>{
@@ -26,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _titleArray = @[@"UIBezierPath画图",@"2 - K线图",@"----",@"---",@"---",@"---",@"---",@"---"];
+    _titleArray = @[@"UIBezierPath画图",@"2 - K线图",@"3 - 折线图 -",@"---",@"---",@"---",@"---",@"---"];
+    
     [self mInitUI];
     [self mInitTableView];
 
@@ -72,13 +73,23 @@
 #pragma mark - cell 点击
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
+        
+        //贝塞尔曲线
         UIBezierPathVC *vc = [UIBezierPathVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
         
+        //K 线图
         KLineTableVC *vc = [[KLineTableVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 2){
+    
+        //折线图
+        LineGraphHostVC *vc = [LineGraphHostVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
+    
     
 }
 
