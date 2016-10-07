@@ -4,24 +4,21 @@
 //
 //  Created by zhaomingxi on 14-2-9.
 //  Copyright (c) 2014年 zhaomingxi. All rights reserved.
-//
 
 #import "lines.h"
-#import "colorModel.h"
-
+#import "LQColorModel.h"
 
 @interface lines(){
 
 }
-
 
 @end
 
 @implementation lines
 
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame{
+    
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -67,7 +64,7 @@
     CGContextSetLineWidth(context, self.lineWidth);
     //NSLog(@"self.lineWidth:%f",self.lineWidth);
     CGContextSetShouldAntialias(context, YES);
-    colorModel *colormodel = [UIColor mRGBWithHexString:self.color withAlpha:self.alpha]; // 设置颜色
+    LQColorModel *colormodel = [UIColor mRGBWithHexString:self.color withAlpha:self.alpha]; // 设置颜色
     CGContextSetRGBStrokeColor(context, (CGFloat)colormodel.R/255.0f, (CGFloat)colormodel.G/255.0f, (CGFloat)colormodel.B/255.0f, self.alpha);
     if (self.startPoint.x==self.endPoint.x && self.endPoint.y==self.startPoint.y) {
         // 定义多个个点 画多点连线
@@ -98,7 +95,7 @@
     CGContextSetShouldAntialias(context, NO);
     // 首先判断是绿的还是红的，根据开盘价和收盘价的坐标来计算
     BOOL isKong = NO;
-    colorModel *colormodel = [UIColor mRGBWithHexString:@"#FF0000" withAlpha:self.alpha]; // 设置默认红色
+    LQColorModel *colormodel = [UIColor mRGBWithHexString:@"#FF0000" withAlpha:self.alpha]; // 设置默认红色
     // 如果开盘价坐标在收盘价坐标上方 则为绿色 即空
     if (openPoint.y<closePoint.y) {
         isKong = YES;
@@ -130,9 +127,5 @@
     const CGPoint point[] = {openPoint,closePoint};
     CGContextStrokeLineSegments(context, point, 2);  // 绘制线段（默认不绘制端点）
 }
-
-
-
-
 
 @end

@@ -6,8 +6,7 @@
 //  Copyright © 2015年 macHY. All rights reserved.
 
 #import "ToolClass.h"
-#import <CommonCrypto/CommonDigest.h>//下面
-
+#import <CommonCrypto/CommonDigest.h>//下面（ MD5加密会用到 ）
 
 @implementation ToolClass
 
@@ -407,19 +406,23 @@
 #pragma mark - 根据tag 值遍历View 里面的指定View
 +(UIView *)mTraversalViewInView:(UIView *)view withTag:(NSInteger)tag{
     
-    UIView *vv = [[UIView alloc]init];
-    for (id obj in view.subviews)  {  //遍历View
+    UIView *resultView = [[UIView alloc]init];
+    
+    for (id obj in view.subviews)  {
+        
+        //遍历View
         if ([obj isKindOfClass:[UIView class]]) {
-            UIView* v = (UIView*)obj;
+           
+            UIView *viewT = (UIView*)obj;
             
-            if (v.tag == tag) {
+            if (viewT.tag == tag) {
                 
-                vv = v;
+                resultView = viewT;
             }
         }
     }
     
-    return vv;
+    return resultView;
 }
 
 #pragma mark - 随机字符串（英文）
@@ -528,7 +531,7 @@
 {
     const char *original_str = [password UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(original_str, strlen(original_str), result);
+    CC_MD5(original_str, (CC_LONG)strlen(original_str), result);
     NSMutableString *hash = [NSMutableString string];
     for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
     {
@@ -537,6 +540,43 @@
     NSString *mdfiveString = [hash lowercaseString];
     return mdfiveString;
 }
+
+
+#pragma mark - MD5 16位加密
+- (NSString *)md5String:(NSString *)str{
+    
+    const char *cStr = [str UTF8String];
+    unsigned char buff[16];
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), buff);
+    
+    NSMutableString *result = [[NSMutableString alloc] init];
+    for (int i=0; i<16; i++) {
+        [result appendFormat:@"%02x", buff[i]];
+    }
+    
+    return result;
+}
+
+
+//#pragma mark -  适配语言
+//+(NSString *)languages:(NSArray *)arr
+//{
+//    NSString * str;
+//    
+//    if (arr.count == 3) {
+//        
+//        if ([kLanguage isEqualToString:@"zh-Hant-CN"] || [kLanguage isEqualToString:@"zh-HK"] || [kLanguage isEqualToString:@"zh-TW"] || [kLanguage isEqualToString:@"zh-Hant-US"]) {
+//            str =  [MyStr str:arr[0]];
+//            
+//        }else if ([kLanguage isEqualToString:@"zh-Hans-CN"] || [kLanguage isEqualToString:@"zh-Hans-US"]) {
+//            str =  [MyStr str:arr[1]];
+//        }else{
+//            str =  [MyStr str:arr[2]];
+//        }
+//    }
+//    
+//    return str;
+//}
 
 
 @end

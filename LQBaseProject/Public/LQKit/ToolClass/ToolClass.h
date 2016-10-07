@@ -190,13 +190,15 @@
 +(NSArray *)mTraversalButtonInView:(UIView *)supView;
 
 
-#pragma mark - 遍历View里面的View视图
+#pragma mark - 遍历View里面的View视图 - 返回数组
 +(NSArray *)mTraversalViewInView:(UIView *)view;
 
 
-#pragma mark - 根据tag值获取UIView里面的指定View视图
+#pragma mark - 根据tag值获取UIView里面的指定View视图 -返回View
 +(UIView *)mTraversalViewInView:(UIView *)view
                         withTag:(NSInteger)tag;
+
+
 
 
 #pragma mark - 获取随机字符串(英文)
@@ -224,14 +226,25 @@
                  forKey:(NSString *) key;
 
 
-
 #pragma mark - 数值根据大小变成万、亿的字符串
 +(NSString*)mChangePrice:(CGFloat)price;
 
 
-
 #pragma mark - MD5 16位加密
 + (NSString *)md5HexDigest:(NSString*)password;
+
+
+
+#pragma mark - MD5 16位加密
++(NSString *)md5String:(NSString *)str;
+
+
+#pragma mark - 适配语言
+//+(NSString *)languages:(NSArray *)arr;
+
+
+
+
 
 
 @end

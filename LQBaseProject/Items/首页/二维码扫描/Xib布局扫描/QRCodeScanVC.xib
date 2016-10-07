@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeScanVC">
+            <connections>
+                <outlet property="bar1" destination="1CR-Ii-6UL" id="e3n-oR-XOr"/>
+                <outlet property="bar2" destination="97h-Y3-cBj" id="NM2-us-aYW"/>
+                <outlet property="customTabBar" destination="76P-DP-qJp" id="l11-ur-fDv"/>
+                <outlet property="resultLab" destination="V8r-6F-zUA" id="hXC-Zq-Erw"/>
+                <outlet property="vScanImg" destination="W8E-JH-ZBs" id="U9t-q0-1i6"/>
+                <outlet property="vScanLineImg" destination="LvD-dW-xgU" id="e1w-gF-P3J"/>
+                <outlet property="vScanLineTopLayout" destination="kma-gT-gYB" id="gJ8-Zs-lgg"/>
+                <outlet property="vScanViewHeightLayout" destination="a32-iA-Yj4" id="QOc-rV-slG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76P-DP-qJp">
+                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="Tir-FL-GJ6"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem title="二维码" image="qrcodeimg" id="1CR-Ii-6UL"/>
+                        <tabBarItem title="条形码" image="barcode" id="97h-Y3-cBj"/>
+                    </items>
+                </tabBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUF-CC-jKS" userLabel="ScanView">
+                    <rect key="frame" x="70" y="194" width="180" height="180"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-dW-xgU">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="kX8-aE-sQR"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codescan" translatesAutoresizingMaskIntoConstraints="NO" id="W8E-JH-ZBs">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="W8E-JH-ZBs" firstAttribute="top" secondItem="jUF-CC-jKS" secondAttribute="top" id="3WK-l1-bp8"/>
+                        <constraint firstAttribute="trailing" secondItem="LvD-dW-xgU" secondAttribute="trailing" id="6sl-0K-ELV"/>
+                        <constraint firstAttribute="width" constant="180" id="BE4-nK-Get"/>
+                        <constraint firstItem="LvD-dW-xgU" firstAttribute="leading" secondItem="jUF-CC-jKS" secondAttribute="leading" id="V6Y-ln-Uul"/>
+                        <constraint firstAttribute="height" constant="180" id="a32-iA-Yj4"/>
+                        <constraint firstAttribute="trailing" secondItem="W8E-JH-ZBs" secondAttribute="trailing" id="dBk-Xt-4qj"/>
+                        <constraint firstAttribute="bottom" secondItem="W8E-JH-ZBs" secondAttribute="bottom" id="gLt-v1-CYR"/>
+                        <constraint firstItem="LvD-dW-xgU" firstAttribute="top" secondItem="jUF-CC-jKS" secondAttribute="top" id="kma-gT-gYB"/>
+                        <constraint firstItem="W8E-JH-ZBs" firstAttribute="leading" secondItem="jUF-CC-jKS" secondAttribute="leading" id="lg5-sT-UOo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgt-wz-K1R" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-UG-3s7" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="374" width="320" height="145"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-Vc-hO6" userLabel="LeftView">
+                    <rect key="frame" x="0.0" y="194" width="70" height="180"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-RI-rbB" userLabel="RightView">
+                    <rect key="frame" x="250" y="194" width="70" height="180"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放入上面的框中" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8r-6F-zUA">
+                    <rect key="frame" x="20" y="389" width="280" height="115"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-mG-ORV">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="7RZ-RZ-PsZ"/>
+                        <constraint firstAttribute="height" constant="50" id="EtB-iS-ny1"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="-22" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="arrowt_left"/>
+                    <connections>
+                        <action selector="mBackButtonClick:" destination="-1" eventType="touchUpInside" id="5Gq-1X-dYL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="V8r-6F-zUA" secondAttribute="trailing" constant="20" id="0ot-Xj-xUe"/>
+                <constraint firstItem="Xnu-Vc-hO6" firstAttribute="top" secondItem="kgt-wz-K1R" secondAttribute="bottom" id="10w-Zx-7aI"/>
+                <constraint firstItem="pQo-UG-3s7" firstAttribute="top" secondItem="jUF-CC-jKS" secondAttribute="bottom" id="8c1-UJ-Xjr"/>
+                <constraint firstItem="jUF-CC-jKS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9bf-WF-MdR"/>
+                <constraint firstItem="76P-DP-qJp" firstAttribute="top" secondItem="V8r-6F-zUA" secondAttribute="bottom" constant="15" id="Axw-aL-ZXc"/>
+                <constraint firstItem="jUF-CC-jKS" firstAttribute="leading" secondItem="Xnu-Vc-hO6" secondAttribute="trailing" id="Enf-hN-peQ"/>
+                <constraint firstItem="jUF-CC-jKS" firstAttribute="top" secondItem="kgt-wz-K1R" secondAttribute="bottom" id="Kh2-bO-hih"/>
+                <constraint firstItem="jUF-CC-jKS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KwR-WW-o83"/>
+                <constraint firstItem="kgt-wz-K1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MBO-sV-RRA"/>
+                <constraint firstItem="QZd-RI-rbB" firstAttribute="top" secondItem="kgt-wz-K1R" secondAttribute="bottom" id="MPB-9s-ZAz"/>
+                <constraint firstAttribute="trailing" secondItem="QZd-RI-rbB" secondAttribute="trailing" id="NUk-a2-XKX"/>
+                <constraint firstItem="76P-DP-qJp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ONs-t1-KaJ"/>
+                <constraint firstItem="Xnu-Vc-hO6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rob-78-9jA"/>
+                <constraint firstAttribute="trailing" secondItem="kgt-wz-K1R" secondAttribute="trailing" id="UKl-kG-7Im"/>
+                <constraint firstAttribute="trailing" secondItem="pQo-UG-3s7" secondAttribute="trailing" id="VBP-F7-1vz"/>
+                <constraint firstAttribute="bottom" secondItem="76P-DP-qJp" secondAttribute="bottom" id="VIt-7W-Uum"/>
+                <constraint firstItem="V8r-6F-zUA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Zov-r6-cY8"/>
+                <constraint firstItem="pQo-UG-3s7" firstAttribute="top" secondItem="Xnu-Vc-hO6" secondAttribute="bottom" id="aNd-Qt-i3n"/>
+                <constraint firstItem="pQo-UG-3s7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dYT-gr-WRp"/>
+                <constraint firstItem="76P-DP-qJp" firstAttribute="top" secondItem="pQo-UG-3s7" secondAttribute="bottom" id="hMH-z9-sYh"/>
+                <constraint firstItem="pQo-UG-3s7" firstAttribute="top" secondItem="QZd-RI-rbB" secondAttribute="bottom" id="hZY-ud-MdZ"/>
+                <constraint firstItem="QZd-RI-rbB" firstAttribute="leading" secondItem="jUF-CC-jKS" secondAttribute="trailing" id="ntd-B5-jf1"/>
+                <constraint firstItem="V8r-6F-zUA" firstAttribute="top" secondItem="jUF-CC-jKS" secondAttribute="bottom" constant="15" id="pRE-ob-bnR"/>
+                <constraint firstItem="QaY-mG-ORV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="q4r-H0-Dht"/>
+                <constraint firstItem="kgt-wz-K1R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t2C-tA-zl6"/>
+                <constraint firstAttribute="trailing" secondItem="76P-DP-qJp" secondAttribute="trailing" id="tFu-cs-4rZ"/>
+                <constraint firstItem="QaY-mG-ORV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u0j-WQ-Ygh"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="77" y="283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowt_left" width="9" height="17"/>
+        <image name="barcode" width="40" height="40"/>
+        <image name="codescan" width="258" height="258"/>
+        <image name="qrcodeimg" width="40" height="40"/>
+    </resources>
+</document>

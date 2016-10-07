@@ -7,9 +7,12 @@
 //
 
 #import "TwoDimensionCodeViewController.h"
-#import "TwoDimensionCodeOriginVC.h"//原生
-#import "LXDTwoDimensionCodeVC.h"//LXD
-#import "HomeScanViewController.h"//自定义扫描
+#import "TwoDimensionCodeOriginVC.h"// 原生
+#import "LXDTwoDimensionCodeVC.h"// LXD
+#import "HomeScanViewController.h"// 自定义扫描
+#import "QRCodeScanVC.h"// 扫描Xib 版本
+
+
 
 
 @interface TwoDimensionCodeViewController ()
@@ -51,6 +54,21 @@
             break;
     }
 }
+
+
+#pragma mark - 第四个按钮点击 - 不崩溃版本
+- (IBAction)mFourthClick:(UIButton *)sender {
+    
+    QRCodeScanVC *vc = [QRCodeScanVC new];
+    
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
+
+
+
 
 
 

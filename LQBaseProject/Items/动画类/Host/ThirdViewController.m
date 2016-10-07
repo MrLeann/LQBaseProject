@@ -10,7 +10,7 @@
 #import "UIBezierPathVC.h"//绘制类
 #import "KLineTableVC.h"//K线图
 #import "LineGraphHostVC.h"//折线图
-
+#import "CGContextVC.h"//绘制
 
 @interface ThirdViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_titleArray;
@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _titleArray = @[@"UIBezierPath画图",@"2 - K线图",@"3 - 折线图 -",@"---",@"---",@"---",@"---",@"---"];
+    _titleArray = @[@"UIBezierPath画图",@"2 - K线图",@"3 - 折线图 -",@"4 - CGContext绘制",@"---",@"---",@"---",@"---"];
     
     [self mInitUI];
     [self mInitTableView];
@@ -87,10 +87,12 @@
         //折线图
         LineGraphHostVC *vc = [LineGraphHostVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 3){
+    
+        //绘制折线，曲线
+        CGContextVC *vc = [CGContextVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
-    
-    
-    
 }
 
 

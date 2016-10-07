@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -60,10 +60,26 @@
                                 <action selector="mBtnClick:" destination="-1" eventType="touchUpInside" id="S38-zH-lT7"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-yu-tnr">
+                            <rect key="frame" x="0.0" y="80" width="93" height="45"/>
+                            <color key="backgroundColor" red="0.0" green="0.76078431369999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="93" id="3xb-ZA-dDC"/>
+                                <constraint firstAttribute="height" constant="45" id="fvb-AH-OPI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="不崩溃版本">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="mFourthClick:" destination="-1" eventType="touchUpInside" id="Ojm-VP-h08"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="leading" secondItem="u5x-HS-elb" secondAttribute="trailing" constant="20" id="2fK-Gv-1Ud"/>
+                        <constraint firstItem="xrs-yu-tnr" firstAttribute="leading" secondItem="kSS-Ce-XeO" secondAttribute="leading" id="6Cu-mP-BZG"/>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="height" secondItem="u5x-HS-elb" secondAttribute="height" id="9ff-H4-jFC"/>
                         <constraint firstItem="hK3-zG-p8u" firstAttribute="width" secondItem="u5x-HS-elb" secondAttribute="width" id="Ari-ha-sqs"/>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="top" secondItem="kSS-Ce-XeO" secondAttribute="top" id="EjQ-Mg-90D"/>
@@ -74,6 +90,7 @@
                         <constraint firstItem="u5x-HS-elb" firstAttribute="leading" secondItem="kSS-Ce-XeO" secondAttribute="leading" id="emt-BH-t2M"/>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="width" secondItem="u5x-HS-elb" secondAttribute="width" id="is8-Qc-l7M"/>
                         <constraint firstItem="hK3-zG-p8u" firstAttribute="height" secondItem="u5x-HS-elb" secondAttribute="height" id="kkJ-GL-Krc"/>
+                        <constraint firstItem="xrs-yu-tnr" firstAttribute="top" secondItem="u5x-HS-elb" secondAttribute="bottom" constant="30" id="xbq-EO-3iZ"/>
                     </constraints>
                 </view>
             </subviews>

@@ -65,21 +65,26 @@
     return self.frame.origin.y + self.frame.size.height;
 }
 
--(void)setTopCorner:(CGFloat)corner
-{
+#pragma mark - 设置上半部分圆角值
+-(void)setTopCorner:(CGFloat)corner{
+    
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight  cornerRadii:CGSizeMake(corner, corner)].CGPath;
     self.layer.mask = shapeLayer;
 }
--(void)setBottomCorner:(CGFloat)corner
-{
+
+
+#pragma mark - 设置下半部分圆角值
+-(void)setBottomCorner:(CGFloat)corner{
+    
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(corner, corner)].CGPath;
     self.layer.mask = shapeLayer;
 }
 
--(void)setAllCorner:(CGFloat)corner
-{
+#pragma mark - 设置四周圆角值
+-(void)setAllCorner:(CGFloat)corner{
+    
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(corner, corner)].CGPath;
     self.layer.mask = shapeLayer;

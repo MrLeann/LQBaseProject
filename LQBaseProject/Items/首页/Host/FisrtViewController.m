@@ -20,8 +20,12 @@
 #import "TableViewAnimationController.h"//表格效果
 #import "CountrySelectTableVC.h"//国家电话区号选择
 #import "PulldownHostVC.h"//下拉列表
+#import "InputPassWordVC.h"//密码输入框弹出
+#import "InPutVC.h"//输入框
+
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
+
 }
 
 //表格控件
@@ -51,7 +55,7 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - ",@"13 - ",@"14 - "];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - 密码输入框",@"13 - 输入框",@"14 - "];
     
     //高度设置
     self.vTableView.rowHeight = 40;
@@ -134,7 +138,18 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(indexPath.row == 10){
         
+        //下拉
         PulldownHostVC *vc = [PulldownHostVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 11){
+    
+        //密码输入框
+        InputPassWordVC *vc = [InputPassWordVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 12){
+        
+        //输入框随行数增加而增加
+        InPutVC *vc = [InPutVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

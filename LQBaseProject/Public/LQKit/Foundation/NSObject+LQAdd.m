@@ -14,10 +14,10 @@
 @interface _TCBlockTarget : NSObject
 
 /**添加一个KVOBlock*/
-- (void)_tc_addBlock:(void(^)(__weak id obj, id oldValue, id newValue))block;
-- (void)_tc_addNotificationBlock:(void(^)(NSNotification *notification))block;
+- (void)_lq_addBlock:(void(^)(__weak id obj, id oldValue, id newValue))block;
+- (void)_lq_addNotificationBlock:(void(^)(NSNotification *notification))block;
 
-- (void)_tc_doNotification:(NSNotification*)notification;
+- (void)_lq_doNotification:(NSNotification*)notification;
 
 @end
 
@@ -37,15 +37,15 @@
     return self;
 }
 
-- (void)_tc_addBlock:(void(^)(__weak id obj, id oldValue, id newValue))block{
+- (void)_lq_addBlock:(void(^)(__weak id obj, id oldValue, id newValue))block{
     [_kvoBlockSet addObject:[block copy]];
 }
 
-- (void)_tc_addNotificationBlock:(void(^)(NSNotification *notification))block{
+- (void)_lq_addNotificationBlock:(void(^)(NSNotification *notification))block{
     [_notificationBlockSet addObject:[block copy]];
 }
 
-- (void)_tc_doNotification:(NSNotification*)notification{
+- (void)_lq_doNotification:(NSNotification*)notification{
     if (!_notificationBlockSet.count) return;
     [_notificationBlockSet enumerateObjectsUsingBlock:^(void (^block)(NSNotification *notification), BOOL * _Nonnull stop) {
         block(notification);
@@ -80,10 +80,11 @@
 static void *const TCKVOBlockKey = "TCKVOBlockKey";
 static void *const TCKVOSemaphoreKey = "TCKVOSemaphoreKey";
 
--(void)_tc_addObserverBlockForKeyPath:(NSString * __nonnull)keyPath block:(void (^_Nonnull)(_Nonnull id obj,_Nonnull id oldValue,_Nonnull id newValue))block{
+#pragma mark - 通过Block方式注册一个KVO，通过该方式注册的KVO无需手动移除，其会在被监听对象销毁的时候自动移除,所以下面的两个移除方法一般无需使用
+-(void)_lq_addObserverBlockForKeyPath:(NSString * __nonnull)keyPath block:(void (^_Nonnull)(_Nonnull id obj,_Nonnull id oldValue,_Nonnull id newValue))block{
     
     if (!keyPath || !block) return;
-    dispatch_semaphore_t kvoSemaphore = [self _tc_getSemaphoreWithKey:TCKVOSemaphoreKey];
+    dispatch_semaphore_t kvoSemaphore = [self _lq_getSemaphoreWithKey:TCKVOSemaphoreKey];
     dispatch_semaphore_wait(kvoSemaphore, DISPATCH_TIME_FOREVER);
     //取出存有所有KVOTarget的字典
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCKVOBlockKey);
@@ -103,28 +104,31 @@ static void *const TCKVOSemaphoreKey = "TCKVOSemaphoreKey";
         //如果第一次，则注册对keyPath的KVO监听
         [self addObserver:targetForKeyPath forKeyPath:keyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
     }
-    [targetForKeyPath _tc_addBlock:block];
+    [targetForKeyPath _lq_addBlock:block];
     //对第一次注册KVO的类进行dealloc方法调剂
-    [self _tc_swizzleDealloc];
+    [self _lq_swizzleDealloc];
     dispatch_semaphore_signal(kvoSemaphore);
 }
-- (void)_tc_removeObserverBlockForKeyPath:(NSString *)keyPath{
+
+#pragma mark - 移除指定KVO
+- (void)_lq_removeObserverBlockForKeyPath:(NSString *)keyPath{
     if (!keyPath.length) return;
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCKVOBlockKey);
     if (!allTargets) return;
     _TCBlockTarget *target = allTargets[keyPath];
     if (!target) return;
-    dispatch_semaphore_t kvoSemaphore = [self _tc_getSemaphoreWithKey:TCKVOSemaphoreKey];
+    dispatch_semaphore_t kvoSemaphore = [self _lq_getSemaphoreWithKey:TCKVOSemaphoreKey];
     dispatch_semaphore_wait(kvoSemaphore, DISPATCH_TIME_FOREVER);
     [self removeObserver:target forKeyPath:keyPath];
     [allTargets removeObjectForKey:keyPath];
     dispatch_semaphore_signal(kvoSemaphore);
 }
 
-- (void)_tc_removeAllObserverBlocks {
+#pragma mark - 提前移除所有的KVO
+- (void)_lq_removeAllObserverBlocks {
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCKVOBlockKey);
     if (!allTargets) return;
-    dispatch_semaphore_t kvoSemaphore = [self _tc_getSemaphoreWithKey:TCKVOSemaphoreKey];
+    dispatch_semaphore_t kvoSemaphore = [self _lq_getSemaphoreWithKey:TCKVOSemaphoreKey];
     dispatch_semaphore_wait(kvoSemaphore, DISPATCH_TIME_FOREVER);
     [allTargets enumerateKeysAndObjectsUsingBlock:^(id key, _TCBlockTarget *target, BOOL *stop) {
         [self removeObserver:target forKeyPath:key];
@@ -136,9 +140,13 @@ static void *const TCKVOSemaphoreKey = "TCKVOSemaphoreKey";
 static void *const TCNotificationBlockKey = "TCNotificationBlockKey";
 static void *const TCNotificationSemaphoreKey = "TCNotificationSemaphoreKey";
 
-- (void)_tc_addNotificationForName:(NSString *)name block:(void (^)(NSNotification *notification))block {
+
+
+#pragma mark - 通过block方式注册通知，通过该方式注册的通知无需手动移除，同样会自动移除
+- (void)_lq_addNotificationForName:(NSString *)name block:(void (^)(NSNotification *notification))block {
+    
     if (!name || !block) return;
-    dispatch_semaphore_t notificationSemaphore = [self _tc_getSemaphoreWithKey:TCNotificationSemaphoreKey];
+    dispatch_semaphore_t notificationSemaphore = [self _lq_getSemaphoreWithKey:TCNotificationSemaphoreKey];
     dispatch_semaphore_wait(notificationSemaphore, DISPATCH_TIME_FOREVER);
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCNotificationBlockKey);
     if (!allTargets) {
@@ -149,21 +157,23 @@ static void *const TCNotificationSemaphoreKey = "TCNotificationSemaphoreKey";
     if (!target) {
         target = [_TCBlockTarget new];
         allTargets[name] = target;
-        [[NSNotificationCenter defaultCenter] addObserver:target selector:@selector(_tc_doNotification:) name:name object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:target selector:@selector(_lq_doNotification:) name:name object:nil];
     }
-    [target _tc_addNotificationBlock:block];
-    [self _tc_swizzleDealloc];
+    [target _lq_addNotificationBlock:block];
+    [self _lq_swizzleDealloc];
     dispatch_semaphore_signal(notificationSemaphore);
     
 }
 
-- (void)_tc_removeNotificationForName:(NSString *)name{
+
+#pragma mark - 提前移除某一个name的通知
+- (void)_lq_removeNotificationForName:(NSString *)name{
     if (!name) return;
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCNotificationBlockKey);
     if (!allTargets.count) return;
     _TCBlockTarget *target = allTargets[name];
     if (!target) return;
-    dispatch_semaphore_t notificationSemaphore = [self _tc_getSemaphoreWithKey:TCNotificationSemaphoreKey];
+    dispatch_semaphore_t notificationSemaphore = [self _lq_getSemaphoreWithKey:TCNotificationSemaphoreKey];
     dispatch_semaphore_wait(notificationSemaphore, DISPATCH_TIME_FOREVER);
     [[NSNotificationCenter defaultCenter] removeObserver:target];
     [allTargets removeObjectForKey:name];
@@ -171,10 +181,10 @@ static void *const TCNotificationSemaphoreKey = "TCNotificationSemaphoreKey";
     
 }
 
-- (void)_tc_removeAllNotification{
+- (void)_lq_removeAllNotification{
     NSMutableDictionary *allTargets = objc_getAssociatedObject(self, TCNotificationBlockKey);
     if (!allTargets.count) return;
-    dispatch_semaphore_t notificationSemaphore = [self _tc_getSemaphoreWithKey:TCNotificationSemaphoreKey];
+    dispatch_semaphore_t notificationSemaphore = [self _lq_getSemaphoreWithKey:TCNotificationSemaphoreKey];
     dispatch_semaphore_wait(notificationSemaphore, DISPATCH_TIME_FOREVER);
     [allTargets enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, _TCBlockTarget *target, BOOL * _Nonnull stop) {
         [[NSNotificationCenter defaultCenter] removeObserver:target];
@@ -183,7 +193,7 @@ static void *const TCNotificationSemaphoreKey = "TCNotificationSemaphoreKey";
     dispatch_semaphore_signal(notificationSemaphore);
 }
 
-- (void)_tc_postNotificationWithName:(NSString *)name userInfo:(NSDictionary *)userInfo{
+- (void)_lq_postNotificationWithName:(NSString *)name userInfo:(NSDictionary *)userInfo{
     [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil userInfo:userInfo];
 }
 
@@ -194,7 +204,7 @@ static void * deallocHasSwizzledKey = "deallocHasSwizzledKey";
 /**
  *  调剂dealloc方法，由于无法直接使用运行时的swizzle方法对dealloc方法进行调剂，所以稍微麻烦一些
  */
-- (void)_tc_swizzleDealloc{
+- (void)_lq_swizzleDealloc{
     //我们给每个类绑定上一个值来判断dealloc方法是否被调剂过，如果调剂过了就无需再次调剂了
     BOOL swizzled = [objc_getAssociatedObject(self.class, deallocHasSwizzledKey) boolValue];
     //如果调剂过则直接返回
@@ -209,9 +219,9 @@ static void * deallocHasSwizzledKey = "deallocHasSwizzledKey";
         //实现我们自己的dealloc方法，通过block的方式
         id newDealloc = ^(__unsafe_unretained id objSelf){
             //在这里我们移除所有的KVO
-            [objSelf _tc_removeAllObserverBlocks];
+            [objSelf _lq_removeAllObserverBlocks];
             //移除所有通知
-            [objSelf _tc_removeAllNotification];
+            [objSelf _lq_removeAllNotification];
             //根据原有的dealloc方法是否存在进行判断
             if (originalDealloc == NULL) {//如果不存在，说明本类没有实现dealloc方法，则需要向父类发送dealloc消息(objc_msgSendSuper)
                 //构造objc_msgSendSuper所需要的参数，.receiver为方法的实际调用者，即为类本身，.super_class指向其父类
@@ -243,7 +253,7 @@ static void * deallocHasSwizzledKey = "deallocHasSwizzledKey";
     }
 }
 
-- (dispatch_semaphore_t)_tc_getSemaphoreWithKey:(void *)key{
+- (dispatch_semaphore_t)_lq_getSemaphoreWithKey:(void *)key{
     dispatch_semaphore_t semaphore = objc_getAssociatedObject(self, key);
     if (!semaphore) {
         semaphore = dispatch_semaphore_create(1);

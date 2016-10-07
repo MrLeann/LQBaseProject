@@ -17,6 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+    
+    //初始化设置中英文
+    [self mInitLanguage];
+    
     
     // 设置
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -24,11 +29,47 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[LQTabBarController alloc] init];
     
-  
-    
-    
-    // Override point for customization after application launch.
+
     return YES;
+}
+
+#pragma mark - 初始化语言环境
+-(void)mInitLanguage{
+    
+    //确定当前语言状态
+    [self getCurrentLanguage];
+    
+    //判断是否是第一次启动
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+        //设置本地语言
+        if ([self isChineseLanguage]) {
+            NSString *languageStr = @"zh-Hans";
+            [[NSUserDefaults standardUserDefaults] setObject:languageStr forKey:AppLanguage];
+        }else{
+            NSString *languageStr = @"en";
+            [[NSUserDefaults standardUserDefaults] setObject:languageStr forKey:AppLanguage];
+        }
+    }
+}
+
+#pragma mark - 获取系统语言
+- (NSString *)getCurrentLanguage{
+    
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    return currentLanguage;
+}
+
+#pragma mark --- 判断当前系统语言为中文
+-(BOOL)isChineseLanguage{
+    
+    BOOL isChinese = NO;
+    if ([[self getCurrentLanguage] rangeOfString:@"zh-Hans"].length > 0) {
+        isChinese = YES;
+        NSLog(@"获取当前为中文---");
+    }
+    return isChinese;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
