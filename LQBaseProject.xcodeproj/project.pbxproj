@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0297BC1DA79B0200413AA3 /* InputPassWordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0297BB1DA79B0200413AA3 /* InputPassWordVC.xib */; };
+		7F0297C41DA7A02200413AA3 /* SlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0297C31DA7A02200413AA3 /* SlipViewController.m */; };
 		7F041CAC1D2E33C600028B74 /* GuideUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F041CAB1D2E33C600028B74 /* GuideUIView.m */; };
 		7F041CE11D2E388D00028B74 /* TwoDimensionCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F041CD11D2E388D00028B74 /* TwoDimensionCodeViewController.m */; };
 		7F041CE21D2E388D00028B74 /* TwoDimensionCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F041CD21D2E388D00028B74 /* TwoDimensionCodeViewController.xib */; };
@@ -148,7 +150,6 @@
 		7FD2FD8E1D813B4A004FFB92 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD7F1D813B4A004FFB92 /* UIWebView+AFNetworking.m */; };
 		7FD2FD981D815387004FFB92 /* LQHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD971D815387004FFB92 /* LQHudView.m */; };
 		7FD2FD9D1D81597F004FFB92 /* InputPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD9B1D81597F004FFB92 /* InputPassWordVC.m */; };
-		7FD2FD9E1D81597F004FFB92 /* InputPassWordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2FD9C1D81597F004FFB92 /* InputPassWordVC.xib */; };
 		7FD2FDA41D815EDE004FFB92 /* InputPassWordFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FDA21D815EDE004FFB92 /* InputPassWordFirstVC.m */; };
 		7FD2FDA51D815EDE004FFB92 /* InputPassWordFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2FDA31D815EDE004FFB92 /* InputPassWordFirstVC.xib */; };
 		7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0C1D4057B400445465 /* BAButton.m */; };
@@ -179,6 +180,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F0297BB1DA79B0200413AA3 /* InputPassWordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPassWordVC.xib; sourceTree = "<group>"; };
+		7F0297C21DA7A02200413AA3 /* SlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlipViewController.h; sourceTree = "<group>"; };
+		7F0297C31DA7A02200413AA3 /* SlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlipViewController.m; sourceTree = "<group>"; };
 		7F041CAA1D2E33C600028B74 /* GuideUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideUIView.h; sourceTree = "<group>"; };
 		7F041CAB1D2E33C600028B74 /* GuideUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideUIView.m; sourceTree = "<group>"; };
 		7F041CD01D2E388D00028B74 /* TwoDimensionCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoDimensionCodeViewController.h; sourceTree = "<group>"; };
@@ -430,7 +434,6 @@
 		7FD2FD971D815387004FFB92 /* LQHudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQHudView.m; sourceTree = "<group>"; };
 		7FD2FD9A1D81597F004FFB92 /* InputPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPassWordVC.h; sourceTree = "<group>"; };
 		7FD2FD9B1D81597F004FFB92 /* InputPassWordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPassWordVC.m; sourceTree = "<group>"; };
-		7FD2FD9C1D81597F004FFB92 /* InputPassWordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPassWordVC.xib; sourceTree = "<group>"; };
 		7FD2FDA11D815EDE004FFB92 /* InputPassWordFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPassWordFirstVC.h; sourceTree = "<group>"; };
 		7FD2FDA21D815EDE004FFB92 /* InputPassWordFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPassWordFirstVC.m; sourceTree = "<group>"; };
 		7FD2FDA31D815EDE004FFB92 /* InputPassWordFirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPassWordFirstVC.xib; sourceTree = "<group>"; };
@@ -477,6 +480,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0297B81DA7957200413AA3 /* 仿网易左右滑动 */ = {
+			isa = PBXGroup;
+			children = (
+				7F0297C01DA7A02200413AA3 /* 袁峥大神 */,
+				7F0297C11DA7A02200413AA3 /* Host */,
+			);
+			path = "仿网易左右滑动";
+			sourceTree = "<group>";
+		};
+		7F0297C01DA7A02200413AA3 /* 袁峥大神 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "袁峥大神";
+			sourceTree = "<group>";
+		};
+		7F0297C11DA7A02200413AA3 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				7F0297C21DA7A02200413AA3 /* SlipViewController.h */,
+				7F0297C31DA7A02200413AA3 /* SlipViewController.m */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
 		7F041CA91D2E33C600028B74 /* 引导页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1098,7 @@
 		7F687BBF1D2DEFDF00B8530A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7F0297B81DA7957200413AA3 /* 仿网易左右滑动 */,
 				7F11C8D41D83EAB3004DB4AF /* 中英文切换 */,
 				7FC587F41D82602E00095EB9 /* 输入框 */,
 				7FD2FD991D81595B004FFB92 /* 弹出密码输入框 */,
@@ -1499,7 +1528,7 @@
 			children = (
 				7FD2FD9A1D81597F004FFB92 /* InputPassWordVC.h */,
 				7FD2FD9B1D81597F004FFB92 /* InputPassWordVC.m */,
-				7FD2FD9C1D81597F004FFB92 /* InputPassWordVC.xib */,
+				7F0297BB1DA79B0200413AA3 /* InputPassWordVC.xib */,
 				7FD2FD9F1D815E92004FFB92 /* 方法二 */,
 				7FD2FDA01D815E92004FFB92 /* 方法一 */,
 			);
@@ -1704,6 +1733,7 @@
 				7FADB98B1D2F995500B14104 /* HomeScanViewController.xib in Resources */,
 				7F6F0E6B1D6C57B700B227B7 /* flotr2.min.js in Resources */,
 				7F6F0E661D6C57B700B227B7 /* ThirdViewController.xib in Resources */,
+				7F0297BC1DA79B0200413AA3 /* InputPassWordVC.xib in Resources */,
 				7F4764791D507768003AD4CD /* MyFoldViewController.xib in Resources */,
 				7F687B201D2DED0F00B8530A /* LaunchScreen.storyboard in Resources */,
 				7F041D121D2E468500028B74 /* applicationIcon@3x.png in Resources */,
@@ -1718,7 +1748,6 @@
 				7F041CE21D2E388D00028B74 /* TwoDimensionCodeViewController.xib in Resources */,
 				7F939E791D576100008FC23E /* CountrySelectFirstVC.xib in Resources */,
 				7F687BAF1D2DEE4700B8530A /* BaseTableViewController.xib in Resources */,
-				7FD2FD9E1D81597F004FFB92 /* InputPassWordVC.xib in Resources */,
 				7F687BC51D2DEFFE00B8530A /* FisrtViewController.xib in Resources */,
 				7F041CE61D2E388D00028B74 /* LXDTwoDimensionCodeVC.xib in Resources */,
 				7F939E801D576445008FC23E /* evt_phone_area_code_zh.txt in Resources */,
@@ -1830,6 +1859,7 @@
 				7F041CF91D2E3E4500028B74 /* CreateCodeTableViewController.m in Sources */,
 				7F6F0E671D6C57B700B227B7 /* KLineTableVC.m in Sources */,
 				7F6F0E6C1D6C57B700B227B7 /* HtmlKLineVC.m in Sources */,
+				7F0297C41DA7A02200413AA3 /* SlipViewController.m in Sources */,
 				7F4D8D181D7EC01E007D3C9A /* NSString+Extension.m in Sources */,
 				7F3FCF2A1D3A29390082FD0B /* LockBtn.m in Sources */,
 				7F4D8D351D7ED8FD007D3C9A /* UIButton+LQAdd.m in Sources */,
