@@ -11,7 +11,7 @@
 
 #import "UIView+WSYToast.h" //弹出黑色小框
 #import "LQKit.h"//自己的LQKit
-
+#import "Singleton.h"//单例
 
 
 /**   全局常量  **/
@@ -19,7 +19,25 @@
 #define kWindowHeight [UIScreen mainScreen].bounds.size.height
 
 
-/**   判断屏幕尺寸  **/
+
+
+/*
+ *    全局颜色
+ */
+
+// ** 随机颜色
+#define kRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
+
+// ** 白色
+#define kWhiteColor [UIColor whiteColor]
+// ** 红色
+#define kRedColor [UIColor redColor]
+// ** 黑色
+#define kBlackColor [UIColor blackColor]
+// ** 灰色
+#define kLightGrayColor [UIColor lightGrayColor]
+
+/*  判断屏幕尺寸 */
 //iPhone 4 / 4s
 #define  iPhone4_4s   (kWindowWidth == 320.f && kWindowHeight == 480.f ? YES : NO)
 //iPhone 5 / 5s /5c
@@ -30,18 +48,16 @@
 #define  iPhone6_plus (kWindowWidth == 414.f && kWindowHeight == 736.f ? YES : NO)
 
 
-
-/**   判断是否是iOS7、8、9系统  */
+/**
+ *   判断是否是iOS7、8、9系统
+ */
 #define IOS7_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] < 8.0)
 #define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] < 9.0)
 #define IOS9_OR_LATER   ([[[UIDevice currentDevice] systemVersion]floatValue] >= 9.0)
 
-
-
-/**
- *   调试类
+/*
+ *   调试类，如果是调试，则TCLog会打印，如果不是注释掉TCLog
  */
-
 #ifdef DEBUG
 #define TCLog(...)  NSLog(__VA_ARGS__)
 
@@ -49,11 +65,9 @@
 #define TCLog(...)
 #endif
 
+
 #define  RGBColor(r, g, b)   [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-
 #define  NavPush(vc, s)     [s.navigationController pushViewController:[[vc alloc]init] animated:YES];
-
-
 
 
 #endif /* GlobalHeader_pch */

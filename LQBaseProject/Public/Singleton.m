@@ -8,7 +8,7 @@
 
 #import "Singleton.h"
 #import "AFNetworking.h"
-
+#import "UIImageView+WebCache.h"
 
 @implementation Singleton
 
@@ -119,7 +119,9 @@
 #pragma mark - 图片缓存框架
 +(void)setImageView:(UIImageView *)imageView withURL:(NSString *)imageUrl placeholderImage:(UIImage *)placeholderimage{
     
-//    [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholderimage];
+    
+    NSLog(@"输出图片url = %@",imageUrl);
+    [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholderimage];
     
 }
 

@@ -21,4 +21,17 @@
 #pragma mark - 对图片中间部分拉伸，周围保持不变
 +(id)mStrethImageWith:(NSString *)imageName;
 
+
+
+//修改image的大小
+
+- (UIImage *)imageByScalingToSize:(CGSize)targetSize;
+
+// 控件截屏
++ (UIImage *)imageWithCaputureView:(UIView *)view;
+
+
+
+
+
 @end

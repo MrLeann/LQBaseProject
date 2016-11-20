@@ -6,17 +6,13 @@
 //  Copyright © 2016年 YZR. All rights reserved.
 //
 
-/**
+/*
  *    配置文件：
  *    1、主要设置一些全局配置
- *
+ *    2、
  */
-
-
 #ifndef Configuration_h
 #define Configuration_h
-
-
 
 
 // * 统一上边距
@@ -32,10 +28,6 @@
 
 // * 统一标题 颜色
 #define kTitleColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
-
-
-
-
 
 
 

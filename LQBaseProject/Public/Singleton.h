@@ -14,6 +14,10 @@ typedef void (^returnBlock)(NSError *error,id obj);
 
 @property (nonatomic, copy)NSString *language;
 
+// 中间跳转
+@property(nonatomic,assign)NSInteger activeIndex;
+
+
 
 
 //单例

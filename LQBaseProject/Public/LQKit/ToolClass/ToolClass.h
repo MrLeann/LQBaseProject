@@ -208,36 +208,29 @@
 #pragma mark - 320-375-414 三种屏幕适配
 +(CGFloat)mAdapt320and375and41Screen:(NSArray *)arr;
 
-
 #pragma mark 字符串转换为日期时间对象
 +(NSDate*)mDateFromString:(NSString*)str;
-
 
 #pragma mark - 不知道什么功能
 +(bool)isEqualWithFloat:(float)f1 float2:(float)f2 absDelta:(int)absDelta;
 
-
 #pragma mark - 根据Key值 获取NSUserDefault 对象
 +(NSObject *)mGetUserDefaults:(NSString *) name;
-
 
 #pragma mark - 设置NSUserDefault 对象
 +(void)mSetUserDefaults:(NSObject *) defaults
                  forKey:(NSString *) key;
 
-
 #pragma mark - 数值根据大小变成万、亿的字符串
 +(NSString*)mChangePrice:(CGFloat)price;
 
 
+
 #pragma mark - MD5 16位加密
-+ (NSString *)md5HexDigest:(NSString*)password;
-
-
++(NSString *)md5HexDigest:(NSString*)password;
 
 #pragma mark - MD5 16位加密
 +(NSString *)md5String:(NSString *)str;
-
 
 #pragma mark - 适配语言
 //+(NSString *)languages:(NSArray *)arr;
@@ -246,5 +239,11 @@
 
 
 
-
 @end
+
+
+
+
+
+
+

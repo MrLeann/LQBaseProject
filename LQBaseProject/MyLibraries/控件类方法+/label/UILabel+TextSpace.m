@@ -11,8 +11,8 @@
 @implementation UILabel (TextSpace)
 
 #pragma mark - 文字样式
--(void)setSpace:(NSString *)labelText lineSpace:(CGFloat)lf paraSpace:(CGFloat)pf alignment:(NSInteger)index kerSpace:(CGFloat)ker
-{
+-(void)setSpace:(NSString *)labelText lineSpace:(CGFloat)lf paraSpace:(CGFloat)pf alignment:(NSInteger)index kerSpace:(CGFloat)ker{
+    
        //文字、行距(5.0)、段距(5.0)、对齐方式(2) 、字间距(1.5)
         NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc]init];
         para.lineSpacing = lf;   //行距
@@ -37,8 +37,8 @@
 #pragma mark - 范围内字体大小改变
 
 //参数  对齐方式 2居中 3居右 其他居左     范围内字体大小     从第几位开始， 多长字符串改变     范围内颜色
--(void)setRangeSize:(NSInteger)Alignment font:(CGFloat)font starIndex:(NSInteger)starIndex index:(NSInteger)index rangeColor:(UIColor*)color
-{
+-(void)setRangeSize:(NSInteger)Alignment font:(CGFloat)font starIndex:(NSInteger)starIndex index:(NSInteger)index rangeColor:(UIColor*)color{
+    
     if (Alignment == 2) {
        self.textAlignment = NSTextAlignmentCenter; // 对齐方式
     }else if (Alignment == 3){

@@ -1,12 +1,7 @@
-
-
-//
 //  FisrtViewController.m
 //  LQBaseProject
-//
 //  Created by YZR on 16/7/7.
 //  Copyright © 2016年 YZR. All rights reserved.
-//
 
 #import "FisrtViewController.h"
 #import "TwoDimensionCodeViewController.h"
@@ -22,7 +17,11 @@
 #import "PulldownHostVC.h"//下拉列表
 #import "InputPassWordVC.h"//密码输入框弹出
 #import "InPutVC.h"//输入框
-#import "SlipViewController.h"//左右滑动的控制器
+#import "SlipGestureVC.h"//左右滑动的控制器
+#import "ReminderTableVIew.h"//提现
+#import "PopUpViewController.h"//弹出框View
+#import "GetImageSizeVC.h"//获取图片尺寸
+#import "LQRefreshViewController.h"//刷新表格头部动画
 
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
@@ -32,18 +31,17 @@
 @property (weak, nonatomic) IBOutlet UITableView *vTableView;
 @property(nonatomic,strong)NSArray *listTitleArr;
 
-
 @end
 
 @implementation FisrtViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"首页";
-    
-     //
     [self mTableViewSetting];
+    
+    
 }
 
 -(void)mTableViewSetting{
@@ -55,14 +53,12 @@
     self.vTableView.separatorInset = UIEdgeInsetsMake(0,20, 0, 20);
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - 密码输入框",@"13 - 输入框",@"14 - 仿网易类型左右滑动"];
-    
+    //
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - 密码输入框",@"13 - 输入框",@"14 - 仿网易类型左右滑动",@"15 - 弹出框View",@"16 - 获取图片尺寸",@"17 -表格头部刷新动画",@"18 - 占位",@"19- 占位",@"20- 占位",@"21 - 占位",@"22 - 占位",@"23 - 占位"];
     
     //高度设置
     self.vTableView.rowHeight = 40;
-    
     [self.vTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
-    
 }
 
 #pragma mark - 行数
@@ -72,13 +68,12 @@
 
 #pragma mark - 返回cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
+    
     cell.textLabel.text = [NSString stringWithFormat:@"%@",self.listTitleArr[indexPath.row]];
-    
-    
     cell.textLabel.font = [UIFont systemFontOfSize:13.0];
-    
-    
+   
     //返回cell里面，点击无色设置
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -147,20 +142,43 @@
         //密码输入框
         InputPassWordVC *vc = [InputPassWordVC new];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 12){
+    }else if(indexPath.row == 12){
         
         //输入框随行数增加而增加
         InPutVC *vc = [InPutVC new];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 13){
+    }else if(indexPath.row == 13){
+        
         //仿网易左右滑动
-        SlipViewController *vc = [SlipViewController new];
+        SlipGestureVC *vc = [SlipGestureVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 14){
+        
+        //弹出框View
+        PopUpViewController *vc = [PopUpViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 15){
+        
+        // 获取图片尺寸
+        GetImageSizeVC *vc = [GetImageSizeVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 16){
+        
+        // 表格头部刷新动画
+        LQRefreshViewController *vc = [LQRefreshViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 17){
+        
+     
+    
+    }else if (indexPath.row == 18){
+        // 点击18
+        
     }
-    
-    
     
 }
 
-
 @end
+
+
+

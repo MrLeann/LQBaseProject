@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoDimensionCodeViewController">
@@ -60,7 +60,7 @@
                                 <action selector="mBtnClick:" destination="-1" eventType="touchUpInside" id="S38-zH-lT7"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-yu-tnr">
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-yu-tnr">
                             <rect key="frame" x="0.0" y="80" width="93" height="45"/>
                             <color key="backgroundColor" red="0.0" green="0.76078431369999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -75,8 +75,23 @@
                                 <action selector="mFourthClick:" destination="-1" eventType="touchUpInside" id="Ojm-VP-h08"/>
                             </connections>
                         </button>
+                        <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3L-rG-W6S">
+                            <rect key="frame" x="116" y="80" width="91" height="45"/>
+                            <color key="backgroundColor" red="0.0" green="0.76078431369999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="sNd-4C-b7K"/>
+                                <constraint firstAttribute="width" constant="91" id="zkW-ZP-g5b"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="项目中usexib">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="mBtnClick:" destination="-1" eventType="touchUpInside" id="Es8-EL-KQZ"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="leading" secondItem="u5x-HS-elb" secondAttribute="trailing" constant="20" id="2fK-Gv-1Ud"/>
                         <constraint firstItem="xrs-yu-tnr" firstAttribute="leading" secondItem="kSS-Ce-XeO" secondAttribute="leading" id="6Cu-mP-BZG"/>
@@ -85,7 +100,9 @@
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="top" secondItem="kSS-Ce-XeO" secondAttribute="top" id="EjQ-Mg-90D"/>
                         <constraint firstItem="hK3-zG-p8u" firstAttribute="leading" secondItem="lXq-Ll-jhH" secondAttribute="trailing" constant="20" id="GCa-zz-KPf"/>
                         <constraint firstAttribute="trailing" secondItem="hK3-zG-p8u" secondAttribute="trailing" id="KRn-YO-XH0"/>
+                        <constraint firstItem="c3L-rG-W6S" firstAttribute="top" secondItem="lXq-Ll-jhH" secondAttribute="bottom" constant="30" id="Kya-kn-RFn"/>
                         <constraint firstItem="u5x-HS-elb" firstAttribute="top" secondItem="kSS-Ce-XeO" secondAttribute="top" id="Mch-mZ-QIU"/>
+                        <constraint firstItem="c3L-rG-W6S" firstAttribute="leading" secondItem="xrs-yu-tnr" secondAttribute="trailing" constant="23" id="QMM-kv-KRz"/>
                         <constraint firstItem="hK3-zG-p8u" firstAttribute="top" secondItem="kSS-Ce-XeO" secondAttribute="top" id="aoj-Bh-zAb"/>
                         <constraint firstItem="u5x-HS-elb" firstAttribute="leading" secondItem="kSS-Ce-XeO" secondAttribute="leading" id="emt-BH-t2M"/>
                         <constraint firstItem="lXq-Ll-jhH" firstAttribute="width" secondItem="u5x-HS-elb" secondAttribute="width" id="is8-Qc-l7M"/>
@@ -94,7 +111,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.85073933945406199" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="kSS-Ce-XeO" secondAttribute="bottom" id="6c5-Fh-Om9"/>
                 <constraint firstAttribute="trailing" secondItem="kSS-Ce-XeO" secondAttribute="trailing" id="ZcP-Kq-Eko"/>
@@ -102,7 +119,7 @@
                 <constraint firstItem="kSS-Ce-XeO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="ybc-ad-13x"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="266" y="325"/>
+            <point key="canvasLocation" x="226" y="315"/>
         </view>
     </objects>
 </document>

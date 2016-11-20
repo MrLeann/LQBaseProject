@@ -16,7 +16,7 @@
 +(BOOL)mIsEmpty:(NSString *)str{
     BOOL isExist = YES;
     //字符串为空就执行
-    if  (str == nil || str == NULL || [str isKindOfClass:[NSNull class]] || [str isEqualToString:@""] || [str isEqualToString:@"<null>"]){
+    if  (str.length == 0||str == nil || str == NULL || [str isKindOfClass:[NSNull class]] || [str isEqualToString:@""] || [str isEqualToString:@"<null>"]){
         isExist = NO;
     }
     return isExist;

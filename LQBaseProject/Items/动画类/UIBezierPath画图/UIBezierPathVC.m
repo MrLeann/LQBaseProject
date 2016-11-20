@@ -6,9 +6,8 @@
 //  Copyright © 2016年 YZR. All rights reserved.
 //
 
-/**
+/*
  *  了解 贝塞尔曲线
- *
  */
 
 #import "UIBezierPathVC.h"
@@ -21,9 +20,10 @@
 
 @implementation UIBezierPathVC
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     [self mInitUI];
+ 
     
 }
 

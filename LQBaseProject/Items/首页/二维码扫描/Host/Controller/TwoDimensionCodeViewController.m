@@ -1,22 +1,18 @@
-//
 //  TwoDimensionCodeViewController.m
 //  LQBaseProject
-//
 //  Created by YZR on 16/7/7.
 //  Copyright © 2016年 YZR. All rights reserved.
-//
+
 
 #import "TwoDimensionCodeViewController.h"
 #import "TwoDimensionCodeOriginVC.h"// 原生
 #import "LXDTwoDimensionCodeVC.h"// LXD
 #import "HomeScanViewController.h"// 自定义扫描
 #import "QRCodeScanVC.h"// 扫描Xib 版本
-
-
+#import "SaoCodeVC.h"//扫描二维码
 
 
 @interface TwoDimensionCodeViewController ()
-
 
 @end
 
@@ -49,6 +45,14 @@
             HomeScanViewController *vc = [HomeScanViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }
+            
+            
+        case 104:{
+            
+            SaoCodeVC *vc = [SaoCodeVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            
             break;
         default:
             break;

@@ -17,19 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
-    
     //初始化设置中英文
     [self mInitLanguage];
     
-    
-    // 设置
+    //设置
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[LQTabBarController alloc] init];
-    
-
     return YES;
 }
 

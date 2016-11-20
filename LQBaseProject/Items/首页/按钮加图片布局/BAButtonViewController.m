@@ -1,10 +1,8 @@
-//
 //  BAButtonViewController.m
 //  LQBaseProject
-//
 //  Created by YZR on 16/7/21.
 //  Copyright © 2016年 YZR. All rights reserved.
-//
+
 
 #import "BAButtonViewController.h"
 #import "BAButton.h"
