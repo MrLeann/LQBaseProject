@@ -183,6 +183,9 @@
 		7FA1E4A61DE14BFD0045A31F /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1E4911DE14BFC0045A31F /* UIScrollView+MJRefresh.m */; };
 		7FA1E4A71DE14BFD0045A31F /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1E4931DE14BFC0045A31F /* UIView+MJExtension.m */; };
 		7FA1E4AA1DE14C4B0045A31F /* LQRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1E4A91DE14C4B0045A31F /* LQRefreshHeader.m */; };
+		7FA1E4D71DE197070045A31F /* ReminderSceneOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1E4D51DE197070045A31F /* ReminderSceneOneVC.m */; };
+		7FA1E4D81DE197070045A31F /* ReminderSceneOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1E4D61DE197070045A31F /* ReminderSceneOneVC.xib */; };
+		7FA1E4DB1DE19CEF0045A31F /* LeafNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1E4DA1DE19CEF0045A31F /* LeafNotification.m */; };
 		7FADB98A1D2F995500B14104 /* HomeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADB9881D2F995500B14104 /* HomeScanViewController.m */; };
 		7FADB98B1D2F995500B14104 /* HomeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FADB9891D2F995500B14104 /* HomeScanViewController.xib */; };
 		7FBD8E951D7F9CD2008180F1 /* CreatQRCodeAndBarCodeFromLeon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD8E941D7F9CD2008180F1 /* CreatQRCodeAndBarCodeFromLeon.m */; };
@@ -568,6 +571,11 @@
 		7FA1E4931DE14BFC0045A31F /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		7FA1E4A81DE14C4B0045A31F /* LQRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRefreshHeader.h; sourceTree = "<group>"; };
 		7FA1E4A91DE14C4B0045A31F /* LQRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRefreshHeader.m; sourceTree = "<group>"; };
+		7FA1E4D41DE197070045A31F /* ReminderSceneOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderSceneOneVC.h; sourceTree = "<group>"; };
+		7FA1E4D51DE197070045A31F /* ReminderSceneOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderSceneOneVC.m; sourceTree = "<group>"; };
+		7FA1E4D61DE197070045A31F /* ReminderSceneOneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderSceneOneVC.xib; sourceTree = "<group>"; };
+		7FA1E4D91DE19CEF0045A31F /* LeafNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeafNotification.h; sourceTree = "<group>"; };
+		7FA1E4DA1DE19CEF0045A31F /* LeafNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeafNotification.m; sourceTree = "<group>"; };
 		7FADB9871D2F995500B14104 /* HomeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScanViewController.h; sourceTree = "<group>"; };
 		7FADB9881D2F995500B14104 /* HomeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScanViewController.m; sourceTree = "<group>"; };
 		7FADB9891D2F995500B14104 /* HomeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScanViewController.xib; sourceTree = "<group>"; };
@@ -1132,6 +1140,7 @@
 		7F31B7281DAA230B0073E524 /* 类似微博提示View */ = {
 			isa = PBXGroup;
 			children = (
+				7FA1E4D31DE196810045A31F /* Demo1 */,
 				7F31B72C1DAA26200073E524 /* Host */,
 			);
 			path = "类似微博提示View";
@@ -1921,6 +1930,18 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		7FA1E4D31DE196810045A31F /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1E4D91DE19CEF0045A31F /* LeafNotification.h */,
+				7FA1E4DA1DE19CEF0045A31F /* LeafNotification.m */,
+				7FA1E4D41DE197070045A31F /* ReminderSceneOneVC.h */,
+				7FA1E4D51DE197070045A31F /* ReminderSceneOneVC.m */,
+				7FA1E4D61DE197070045A31F /* ReminderSceneOneVC.xib */,
+			);
+			path = Demo1;
+			sourceTree = "<group>";
+		};
 		7FADB9861D2F994100B14104 /* 自定义扫描 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2380,6 +2401,7 @@
 				7F6D6F361D7AC402006D20A2 /* LanguageChangeVC.xib in Resources */,
 				7F939E741D57609E008FC23E /* CountrySelectTableVC.xib in Resources */,
 				7F6F0E681D6C57B700B227B7 /* KLineTableVC.xib in Resources */,
+				7FA1E4D81DE197070045A31F /* ReminderSceneOneVC.xib in Resources */,
 				7F041D311D2E65E000028B74 /* OriBarCodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2409,6 +2431,7 @@
 				7FA1E4991DE14BFC0045A31F /* MJRefreshAutoGifFooter.m in Sources */,
 				7F0FCC0C1DDA9B7900A760FB /* SaoCodeVC.m in Sources */,
 				7F6D6F351D7AC402006D20A2 /* LanguageChangeVC.m in Sources */,
+				7FA1E4DB1DE19CEF0045A31F /* LeafNotification.m in Sources */,
 				7F041D301D2E65E000028B74 /* OriBarCodeViewController.m in Sources */,
 				7F30E9EC1DA8F03E00A51BEB /* XBThirdViewController.m in Sources */,
 				7FF47CA31D388AE9003A75AB /* SlideDeleteViewController.m in Sources */,
@@ -2468,6 +2491,7 @@
 				7F4D8D381D7EDBE7007D3C9A /* UITextField+LQAdd.m in Sources */,
 				7F52DA361DD9A84B00424BA8 /* UIView+WebCacheOperation.m in Sources */,
 				7FD2FD801D813B4A004FFB92 /* AFHTTPSessionManager.m in Sources */,
+				7FA1E4D71DE197070045A31F /* ReminderSceneOneVC.m in Sources */,
 				7FD2FD8E1D813B4A004FFB92 /* UIWebView+AFNetworking.m in Sources */,
 				7F52DA351DD9A84B00424BA8 /* UIImageView+WebCache.m in Sources */,
 				7F687B1B1D2DED0F00B8530A /* LQBaseProject.xcdatamodeld in Sources */,
