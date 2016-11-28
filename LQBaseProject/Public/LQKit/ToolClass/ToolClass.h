@@ -1,10 +1,7 @@
-//
 //  ToolClass.h
 //  Xuebei
-//
 //  Created by maceasy on 15/11/27.
 //  Copyright © 2015年 macHY. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -198,12 +195,8 @@
 +(UIView *)mTraversalViewInView:(UIView *)view
                         withTag:(NSInteger)tag;
 
-
-
-
 #pragma mark - 获取随机字符串(英文)
 + (NSString *)mGetRandomString;
-
 
 #pragma mark - 320-375-414 三种屏幕适配
 +(CGFloat)mAdapt320and375and41Screen:(NSArray *)arr;
@@ -224,26 +217,15 @@
 #pragma mark - 数值根据大小变成万、亿的字符串
 +(NSString*)mChangePrice:(CGFloat)price;
 
-
-
 #pragma mark - MD5 16位加密
 +(NSString *)md5HexDigest:(NSString*)password;
 
 #pragma mark - MD5 16位加密
 +(NSString *)md5String:(NSString *)str;
 
+
 #pragma mark - 适配语言
 //+(NSString *)languages:(NSArray *)arr;
 
-
-
-
-
 @end
-
-
-
-
-
-
 

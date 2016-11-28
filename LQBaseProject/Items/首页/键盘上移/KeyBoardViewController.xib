@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyBoardViewController">
+            <connections>
+                <outlet property="textField1" destination="nYP-9K-Jd3" id="4Es-00-Ngt"/>
+                <outlet property="textField2" destination="UbT-fW-XfO" id="VUb-hR-EZf"/>
+                <outlet property="textField3" destination="krU-Ro-fMF" id="G6e-tS-nz1"/>
+                <outlet property="textField4" destination="pZ3-my-ura" id="VoK-Xd-89V"/>
+                <outlet property="textField5" destination="x3U-Ws-aLl" id="GES-5g-cXS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UbT-fW-XfO">
+                    <rect key="frame" x="112" y="230" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Rpm-Rb-Y8Z"/>
+                        <constraint firstAttribute="width" constant="97" id="mlG-C5-ECQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krU-Ro-fMF">
+                    <rect key="frame" x="112" y="283" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="RJV-Uk-uof"/>
+                        <constraint firstAttribute="height" constant="30" id="oqo-59-tN9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-my-ura">
+                    <rect key="frame" x="112" y="333" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="i1r-u2-npe"/>
+                        <constraint firstAttribute="height" constant="30" id="lDo-xk-r57"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYP-9K-Jd3">
+                    <rect key="frame" x="112" y="187" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3UY-Md-7YX"/>
+                        <constraint firstAttribute="width" constant="97" id="SU9-3z-IuH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3U-Ws-aLl">
+                    <rect key="frame" x="112" y="389" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="2kA-QL-WQN"/>
+                        <constraint firstAttribute="height" constant="30" id="F1t-U2-IdI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="krU-Ro-fMF" firstAttribute="top" secondItem="UbT-fW-XfO" secondAttribute="bottom" constant="23" id="A0n-he-QDR"/>
+                <constraint firstItem="nYP-9K-Jd3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="187" id="Lru-Gi-4oo"/>
+                <constraint firstItem="x3U-Ws-aLl" firstAttribute="top" secondItem="pZ3-my-ura" secondAttribute="bottom" constant="26" id="Ly1-aL-a4H"/>
+                <constraint firstItem="nYP-9K-Jd3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jtw-qG-xsg"/>
+                <constraint firstItem="x3U-Ws-aLl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mi7-3c-z9A"/>
+                <constraint firstItem="pZ3-my-ura" firstAttribute="top" secondItem="krU-Ro-fMF" secondAttribute="bottom" constant="20" id="qVd-wd-lcl"/>
+                <constraint firstItem="pZ3-my-ura" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qZF-LL-e34"/>
+                <constraint firstItem="krU-Ro-fMF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="riC-3Y-Stn"/>
+                <constraint firstItem="UbT-fW-XfO" firstAttribute="top" secondItem="nYP-9K-Jd3" secondAttribute="bottom" constant="13" id="t5L-yy-9Gu"/>
+                <constraint firstItem="UbT-fW-XfO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vsf-o0-7mN"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="214" y="266"/>
+        </view>
+    </objects>
+</document>

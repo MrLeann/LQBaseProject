@@ -1,10 +1,8 @@
-//
 //  Singleton.m
 //  LQBaseProject
-//
 //  Created by YZR on 16/9/8.
 //  Copyright © 2016年 YZR. All rights reserved.
-//
+
 
 #import "Singleton.h"
 #import "AFNetworking.h"
@@ -12,15 +10,14 @@
 
 @implementation Singleton
 
-
-+ (Singleton *)shared
-{
++(Singleton *)shared{
+    
     static Singleton *singleton = nil;
     static dispatch_once_t oneToken;
     dispatch_once(&oneToken,^{
-        
         singleton = [[Singleton alloc] init];
     });
+    
     return singleton;
 }
 
@@ -37,7 +34,9 @@
         //        NSLog(@"输出进度 = %@",downloadProgress);
         
         // 这里可以获取到目前的数据请求的进度
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+    }success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        
         // 请求成功，解析数据
         //        NSLog(@"responseObject = %@", responseObject);
         //        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
@@ -116,13 +115,12 @@
     //    }];
 }
 
+
 #pragma mark - 图片缓存框架
 +(void)setImageView:(UIImageView *)imageView withURL:(NSString *)imageUrl placeholderImage:(UIImage *)placeholderimage{
     
-    
     NSLog(@"输出图片url = %@",imageUrl);
     [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholderimage];
-    
 }
 
 

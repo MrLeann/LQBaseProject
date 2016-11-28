@@ -18,7 +18,6 @@
     
     [self mInitUI];
     
-//    [self mInitData];
 }
 
 -(void)mInitUI{
@@ -27,10 +26,12 @@
 
 #pragma mark - 按钮一点击
 - (IBAction)mFirstButtonClick:(UIButton *)sender{
-    /**
+    
+    /*
      *  传入了self，是添加到vc控制器上的，不是UIWindow哦。
      */
     [LeafNotification showInController:self withText:@"我是一个粉刷匠"];
+    
 }
 
 #pragma mark - 按钮二点击
