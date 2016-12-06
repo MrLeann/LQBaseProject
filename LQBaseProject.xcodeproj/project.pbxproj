@@ -106,6 +106,12 @@
 		7F4D8D3B1D7EDCA8007D3C9A /* UIImageView+LQAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D8D3A1D7EDCA8007D3C9A /* UIImageView+LQAdd.m */; };
 		7F4D8D421D7EE6F3007D3C9A /* CHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D8D3F1D7EE6F3007D3C9A /* CHKeychain.m */; };
 		7F4D8D431D7EE6F3007D3C9A /* CHUserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D8D411D7EE6F3007D3C9A /* CHUserDataManager.m */; };
+		7F516F6B1DF6936700083050 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F516F6A1DF6936700083050 /* cities.plist */; };
+		7F516F6E1DF693BC00083050 /* ProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F516F6D1DF693BC00083050 /* ProvinceModel.m */; };
+		7F516F741DF695AD00083050 /* SelectDistrictView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F516F731DF695AD00083050 /* SelectDistrictView.m */; };
+		7F516F771DF69CDC00083050 /* ProModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F516F761DF69CDC00083050 /* ProModel.m */; };
+		7F517A1B1DF6688E007186B3 /* SecondarySelectCityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F517A191DF6688E007186B3 /* SecondarySelectCityVC.m */; };
+		7F517A1C1DF6688E007186B3 /* SecondarySelectCityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F517A1A1DF6688E007186B3 /* SecondarySelectCityVC.xib */; };
 		7F51E7AD1DE67AE60084DA59 /* KeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F51E7A91DE67AE60084DA59 /* KeyBoardViewController.m */; };
 		7F51E7AE1DE67AE60084DA59 /* KeyBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F51E7AA1DE67AE60084DA59 /* KeyBoardViewController.xib */; };
 		7F51E7AF1DE67AE60084DA59 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F51E7AC1DE67AE60084DA59 /* UIView+YSTextInputKeyboard.m */; };
@@ -247,10 +253,13 @@
 		7FD2FD8C1D813B4A004FFB92 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD7B1D813B4A004FFB92 /* UIProgressView+AFNetworking.m */; };
 		7FD2FD8D1D813B4A004FFB92 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD7D1D813B4A004FFB92 /* UIRefreshControl+AFNetworking.m */; };
 		7FD2FD8E1D813B4A004FFB92 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD7F1D813B4A004FFB92 /* UIWebView+AFNetworking.m */; };
-		7FD2FD981D815387004FFB92 /* LQHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD971D815387004FFB92 /* LQHudView.m */; };
 		7FD2FD9D1D81597F004FFB92 /* InputPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FD9B1D81597F004FFB92 /* InputPassWordVC.m */; };
 		7FD2FDA41D815EDE004FFB92 /* InputPassWordFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2FDA21D815EDE004FFB92 /* InputPassWordFirstVC.m */; };
 		7FD2FDA51D815EDE004FFB92 /* InputPassWordFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2FDA31D815EDE004FFB92 /* InputPassWordFirstVC.xib */; };
+		7FD799091DF2736600C73124 /* CitySelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD799041DF2736600C73124 /* CitySelectTableViewController.m */; };
+		7FD7990D1DF2739300C73124 /* SelectProvinceDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7990B1DF2739300C73124 /* SelectProvinceDemoVC.m */; };
+		7FD7990E1DF2739300C73124 /* SelectProvinceDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD7990C1DF2739300C73124 /* SelectProvinceDemoVC.xib */; };
+		7FD799101DF2746600C73124 /* province.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FD7990F1DF2746600C73124 /* province.txt */; };
 		7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0C1D4057B400445465 /* BAButton.m */; };
 		7FDE9D101D4057EB00445465 /* BAButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D0F1D4057EB00445465 /* BAButtonViewController.m */; };
 		7FDE9D151D4060CB00445465 /* DCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE9D141D4060CB00445465 /* DCLabel.m */; };
@@ -464,6 +473,16 @@
 		7F4D8D3F1D7EE6F3007D3C9A /* CHKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHKeychain.m; sourceTree = "<group>"; };
 		7F4D8D401D7EE6F3007D3C9A /* CHUserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUserDataManager.h; sourceTree = "<group>"; };
 		7F4D8D411D7EE6F3007D3C9A /* CHUserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUserDataManager.m; sourceTree = "<group>"; };
+		7F516F6A1DF6936700083050 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		7F516F6C1DF693BC00083050 /* ProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceModel.h; sourceTree = "<group>"; };
+		7F516F6D1DF693BC00083050 /* ProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceModel.m; sourceTree = "<group>"; };
+		7F516F721DF695AD00083050 /* SelectDistrictView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDistrictView.h; sourceTree = "<group>"; };
+		7F516F731DF695AD00083050 /* SelectDistrictView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDistrictView.m; sourceTree = "<group>"; };
+		7F516F751DF69CDC00083050 /* ProModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProModel.h; sourceTree = "<group>"; };
+		7F516F761DF69CDC00083050 /* ProModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProModel.m; sourceTree = "<group>"; };
+		7F517A181DF6688E007186B3 /* SecondarySelectCityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondarySelectCityVC.h; sourceTree = "<group>"; };
+		7F517A191DF6688E007186B3 /* SecondarySelectCityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondarySelectCityVC.m; sourceTree = "<group>"; };
+		7F517A1A1DF6688E007186B3 /* SecondarySelectCityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondarySelectCityVC.xib; sourceTree = "<group>"; };
 		7F51E7A81DE67AE60084DA59 /* KeyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardViewController.h; sourceTree = "<group>"; };
 		7F51E7A91DE67AE60084DA59 /* KeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardViewController.m; sourceTree = "<group>"; };
 		7F51E7AA1DE67AE60084DA59 /* KeyBoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyBoardViewController.xib; sourceTree = "<group>"; };
@@ -716,13 +735,17 @@
 		7FD2FD7D1D813B4A004FFB92 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		7FD2FD7E1D813B4A004FFB92 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		7FD2FD7F1D813B4A004FFB92 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		7FD2FD961D815387004FFB92 /* LQHudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQHudView.h; sourceTree = "<group>"; };
-		7FD2FD971D815387004FFB92 /* LQHudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQHudView.m; sourceTree = "<group>"; };
 		7FD2FD9A1D81597F004FFB92 /* InputPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPassWordVC.h; sourceTree = "<group>"; };
 		7FD2FD9B1D81597F004FFB92 /* InputPassWordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPassWordVC.m; sourceTree = "<group>"; };
 		7FD2FDA11D815EDE004FFB92 /* InputPassWordFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPassWordFirstVC.h; sourceTree = "<group>"; };
 		7FD2FDA21D815EDE004FFB92 /* InputPassWordFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPassWordFirstVC.m; sourceTree = "<group>"; };
 		7FD2FDA31D815EDE004FFB92 /* InputPassWordFirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPassWordFirstVC.xib; sourceTree = "<group>"; };
+		7FD799031DF2736600C73124 /* CitySelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySelectTableViewController.h; sourceTree = "<group>"; };
+		7FD799041DF2736600C73124 /* CitySelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySelectTableViewController.m; sourceTree = "<group>"; };
+		7FD7990A1DF2739300C73124 /* SelectProvinceDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectProvinceDemoVC.h; sourceTree = "<group>"; };
+		7FD7990B1DF2739300C73124 /* SelectProvinceDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectProvinceDemoVC.m; sourceTree = "<group>"; };
+		7FD7990C1DF2739300C73124 /* SelectProvinceDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectProvinceDemoVC.xib; sourceTree = "<group>"; };
+		7FD7990F1DF2746600C73124 /* province.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = province.txt; sourceTree = "<group>"; };
 		7FDE9D0B1D4057B400445465 /* BAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
 		7FDE9D0C1D4057B400445465 /* BAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
 		7FDE9D0E1D4057EB00445465 /* BAButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButtonViewController.h; sourceTree = "<group>"; };
@@ -1408,27 +1431,9 @@
 		7F4D8CFA1D7EC01E007D3C9A /* 部件Widget */ = {
 			isa = PBXGroup;
 			children = (
-				7F4D8CFB1D7EC01E007D3C9A /* AlertView警示框 */,
-				7F4D8CFC1D7EC01E007D3C9A /* HUD加载框 */,
 				7F4D8CFD1D7EC01E007D3C9A /* Toast */,
 			);
 			path = "部件Widget";
-			sourceTree = "<group>";
-		};
-		7F4D8CFB1D7EC01E007D3C9A /* AlertView警示框 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "AlertView警示框";
-			sourceTree = "<group>";
-		};
-		7F4D8CFC1D7EC01E007D3C9A /* HUD加载框 */ = {
-			isa = PBXGroup;
-			children = (
-				7FD2FD961D815387004FFB92 /* LQHudView.h */,
-				7FD2FD971D815387004FFB92 /* LQHudView.m */,
-			);
-			path = "HUD加载框";
 			sourceTree = "<group>";
 		};
 		7F4D8CFD1D7EC01E007D3C9A /* Toast */ = {
@@ -1520,6 +1525,45 @@
 				7F4D8D411D7EE6F3007D3C9A /* CHUserDataManager.m */,
 			);
 			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		7F517A141DF66843007186B3 /* 二级城市选择 */ = {
+			isa = PBXGroup;
+			children = (
+				7F516F6A1DF6936700083050 /* cities.plist */,
+				7F517A151DF66843007186B3 /* Controller */,
+				7F517A161DF66843007186B3 /* Model */,
+				7F517A171DF66843007186B3 /* View */,
+			);
+			path = "二级城市选择";
+			sourceTree = "<group>";
+		};
+		7F517A151DF66843007186B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F517A181DF6688E007186B3 /* SecondarySelectCityVC.h */,
+				7F517A191DF6688E007186B3 /* SecondarySelectCityVC.m */,
+				7F517A1A1DF6688E007186B3 /* SecondarySelectCityVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7F517A161DF66843007186B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F516F6C1DF693BC00083050 /* ProvinceModel.h */,
+				7F516F6D1DF693BC00083050 /* ProvinceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F517A171DF66843007186B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F516F721DF695AD00083050 /* SelectDistrictView.h */,
+				7F516F731DF695AD00083050 /* SelectDistrictView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7F51E7A71DE67AE60084DA59 /* 键盘上移 */ = {
@@ -1733,6 +1777,7 @@
 		7F687BBF1D2DEFDF00B8530A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7FD798FE1DF2703600C73124 /* 城市选择器 */,
 				7F51E7A71DE67AE60084DA59 /* 键盘上移 */,
 				7F07C06A1DE52B0D006C5268 /* 检测版本更新 */,
 				7F79149E1DE2DAA4008B49F9 /* HTML应用 */,
@@ -2367,6 +2412,62 @@
 			path = "方法一";
 			sourceTree = "<group>";
 		};
+		7FD798FE1DF2703600C73124 /* 城市选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				7F517A141DF66843007186B3 /* 二级城市选择 */,
+				7FD799051DF2736600C73124 /* Josn层级关系 */,
+				7FD799021DF2736600C73124 /* Host */,
+			);
+			path = "城市选择器";
+			sourceTree = "<group>";
+		};
+		7FD799021DF2736600C73124 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				7FD799031DF2736600C73124 /* CitySelectTableViewController.h */,
+				7FD799041DF2736600C73124 /* CitySelectTableViewController.m */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		7FD799051DF2736600C73124 /* Josn层级关系 */ = {
+			isa = PBXGroup;
+			children = (
+				7FD799081DF2736600C73124 /* ViewController */,
+				7FD799061DF2736600C73124 /* Model */,
+				7FD799071DF2736600C73124 /* View */,
+			);
+			path = "Josn层级关系";
+			sourceTree = "<group>";
+		};
+		7FD799061DF2736600C73124 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD799071DF2736600C73124 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD799081DF2736600C73124 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7FD7990F1DF2746600C73124 /* province.txt */,
+				7F516F751DF69CDC00083050 /* ProModel.h */,
+				7F516F761DF69CDC00083050 /* ProModel.m */,
+				7FD7990A1DF2739300C73124 /* SelectProvinceDemoVC.h */,
+				7FD7990B1DF2739300C73124 /* SelectProvinceDemoVC.m */,
+				7FD7990C1DF2739300C73124 /* SelectProvinceDemoVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7FDE9D091D4057AD00445465 /* 按钮加图片布局 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2608,6 +2709,7 @@
 				7F939E791D576100008FC23E /* CountrySelectFirstVC.xib in Resources */,
 				7F30E9F21DA8F05400A51BEB /* XBFourthViewController.xib in Resources */,
 				7F687BAF1D2DEE4700B8530A /* BaseTableViewController.xib in Resources */,
+				7FD799101DF2746600C73124 /* province.txt in Resources */,
 				7F52D9FF1DD9A02600424BA8 /* GetImageSizeVC.xib in Resources */,
 				7F687BC51D2DEFFE00B8530A /* FisrtViewController.xib in Resources */,
 				7F7914B51DE2DED2008B49F9 /* HTMLSceneSecondVC.xib in Resources */,
@@ -2620,6 +2722,7 @@
 				7FC587F91D82604300095EB9 /* InPutVC.xib in Resources */,
 				7F041D0D1D2E450200028B74 /* picture@2x.png in Resources */,
 				7F041CE81D2E388D00028B74 /* TwoDimensionCodeOriginVC.xib in Resources */,
+				7F517A1C1DF6688E007186B3 /* SecondarySelectCityVC.xib in Resources */,
 				7F6F0E6A1D6C57B700B227B7 /* flotr2.js in Resources */,
 				7FF47CA41D388AE9003A75AB /* SlideDeleteViewController.xib in Resources */,
 				7F7914B71DE2E195008B49F9 /* myhtml.html in Resources */,
@@ -2634,9 +2737,11 @@
 				7F52DA041DD9A3DB00424BA8 /* GetImageSizeCell.xib in Resources */,
 				7F6F0E6D1D6C57B700B227B7 /* HtmlKLineVC.xib in Resources */,
 				7F2F1E0E1D6D3073005FD62A /* PulldownRandomVC.xib in Resources */,
+				7FD7990E1DF2739300C73124 /* SelectProvinceDemoVC.xib in Resources */,
 				7FD2FDA51D815EDE004FFB92 /* InputPassWordFirstVC.xib in Resources */,
 				7F7914AB1DE2DE8E008B49F9 /* HTMLViewController.xib in Resources */,
 				7F30E9D21DA8DB0700A51BEB /* HMTFirstViewController.xib in Resources */,
+				7F516F6B1DF6936700083050 /* cities.plist in Resources */,
 				7F6D6F361D7AC402006D20A2 /* LanguageChangeVC.xib in Resources */,
 				7F939E741D57609E008FC23E /* CountrySelectTableVC.xib in Resources */,
 				7F6F0E681D6C57B700B227B7 /* KLineTableVC.xib in Resources */,
@@ -2667,6 +2772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F52DA341DD9A84B00424BA8 /* UIImageView+HighlightedWebCache.m in Sources */,
+				7F516F771DF69CDC00083050 /* ProModel.m in Sources */,
 				7F493D6B1DE544160092DE0E /* GJCFQuickCacheUitil.m in Sources */,
 				7FA1E4991DE14BFC0045A31F /* MJRefreshAutoGifFooter.m in Sources */,
 				7F0FCC0C1DDA9B7900A760FB /* SaoCodeVC.m in Sources */,
@@ -2681,6 +2787,7 @@
 				7FDE9D0D1D4057B400445465 /* BAButton.m in Sources */,
 				7F52DA321DD9A84B00424BA8 /* UIImage+MultiFormat.m in Sources */,
 				7F2F1E0D1D6D3073005FD62A /* PulldownRandomVC.m in Sources */,
+				7F516F6E1DF693BC00083050 /* ProvinceModel.m in Sources */,
 				7FD2FD831D813B4A004FFB92 /* AFURLRequestSerialization.m in Sources */,
 				7F041D021D2E432B00028B74 /* UIImage+RoundRectImage.m in Sources */,
 				7F4D8D2C1D7EC6EA007D3C9A /* UIImage+LQAdd.m in Sources */,
@@ -2749,6 +2856,7 @@
 				7F4D8D261D7EC161007D3C9A /* UIColor+LQAdd.m in Sources */,
 				7FD2FD8B1D813B4A004FFB92 /* UIImageView+AFNetworking.m in Sources */,
 				7FC454DD1D4303DB0021700E /* WaveGraph.m in Sources */,
+				7F517A1B1DF6688E007186B3 /* SecondarySelectCityVC.m in Sources */,
 				7F30E9DB1DA8DB3000A51BEB /* HMTThirdViewController.m in Sources */,
 				7FD2FDA41D815EDE004FFB92 /* InputPassWordFirstVC.m in Sources */,
 				7F687BB01D2DEE4700B8530A /* LQNavigationController.m in Sources */,
@@ -2760,18 +2868,21 @@
 				7F52D9FE1DD9A02600424BA8 /* GetImageSizeVC.m in Sources */,
 				7FE133151DC719B300530155 /* TimeShareVC.m in Sources */,
 				7F0FCC071DDA977B00A760FB /* ImageHeightHandle.m in Sources */,
+				7FD7990D1DF2739300C73124 /* SelectProvinceDemoVC.m in Sources */,
 				7FD2FD8D1D813B4A004FFB92 /* UIRefreshControl+AFNetworking.m in Sources */,
 				7FD2FD861D813B4A004FFB92 /* AFAutoPurgingImageCache.m in Sources */,
 				7F31B73F1DAA394A0073E524 /* CustomPopVC.m in Sources */,
 				7FA1E4A31DE14BFD0045A31F /* MJRefreshConst.m in Sources */,
 				7FA1E4A11DE14BFD0045A31F /* MJRefreshStateHeader.m in Sources */,
 				7FDE9D181D4060DE00445465 /* DCLabelViewController.m in Sources */,
+				7F516F741DF695AD00083050 /* SelectDistrictView.m in Sources */,
 				7FE133201DC7304E00530155 /* CandleDrawingVC.m in Sources */,
 				7F30E9C11DA8C9FB00A51BEB /* XBHostViewController.m in Sources */,
 				7F3FCF281D3A29390082FD0B /* HandLockVC.m in Sources */,
 				7F7914AF1DE2DEB9008B49F9 /* HTMLSceneOneVC.m in Sources */,
 				7FA1E4A51DE14BFD0045A31F /* UIScrollView+MJExtension.m in Sources */,
 				7FC454DA1D43012A0021700E /* WaveAnimationViewController.m in Sources */,
+				7FD799091DF2736600C73124 /* CitySelectTableViewController.m in Sources */,
 				7F52DA2B1DD9A84B00424BA8 /* SDWebImageDecoder.m in Sources */,
 				7FA1E4951DE14BFC0045A31F /* MJRefreshBackFooter.m in Sources */,
 				7F30E9D61DA8DB1B00A51BEB /* HMTSecondViewController.m in Sources */,
@@ -2846,7 +2957,6 @@
 				7F30E9F11DA8F05400A51BEB /* XBFourthViewController.m in Sources */,
 				7F041CE31D2E388D00028B74 /* LXDScanCodeController.m in Sources */,
 				7F6F0E751D6C57B700B227B7 /* FourthViewController.m in Sources */,
-				7FD2FD981D815387004FFB92 /* LQHudView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

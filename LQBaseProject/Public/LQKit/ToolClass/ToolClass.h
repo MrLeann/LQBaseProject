@@ -138,7 +138,7 @@
  *  labelText 传入的字符串
  *  postLabelMaxWidth 要显示的label 最大宽度
  *  font 字体
- *  space 应该是nsstring距离label 的边界距离（toast传的是5）
+ *  space 应该是行距
  */
 #pragma mark - 根据字符的宽度返回所在屏幕的高度
 +(CGSize)mCalculateVerticalSize:(NSString *)labelText

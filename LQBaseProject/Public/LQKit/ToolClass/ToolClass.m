@@ -258,16 +258,18 @@
 }
 
 
-
-//计算一个label的大小,labelText 是字符串，postLabelMaxWidth是什么范围内的宽度，space 应该是nsstring距离label 的边界距离
+// 计算一个label的大小,labelText 是字符串，postLabelMaxWidth是什么范围内的宽度，space 每一行相隔每一行的行距 。
 +(CGSize)mCalculateVerticalSize:(NSString *)labelText postLabelMaxWidth:(CGFloat)postLabelMaxWidth font:(UIFont*)font defaultSpace:(CGFloat)space{
     
     //UIFont *font = [UIFont fontWithName:@"NotoSansHans-DemiLight" size:FONT_SIZE];
     NSDictionary *cellTextDic=nil;
-    if (space!=0) {
+    if(space!=0){
+        
+        /**   行距  */
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
         [paragraphStyle setLineSpacing:space];
         cellTextDic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+        
     }else{
         cellTextDic = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
     }
