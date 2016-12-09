@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AC286D9662B25909AABBC2A025351F542C1FFFFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8019be03-a261-1e4c-bbac-b98f50584822++6123" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AC286D9662B25909AABBC2A025351F542C1FFFFA" : 0,
+    "8019be03-a261-1e4c-bbac-b98f50584822++6123" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "77DC09D1-E99E-4BF0-9761-D6924F8B0DFF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AC286D9662B25909AABBC2A025351F542C1FFFFA" : "LQBaseProject\/",
+    "8019be03-a261-1e4c-bbac-b98f50584822++6123" : "virtualdeal\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LQBaseProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LQBaseProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.252\/svn\/2016",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8019be03-a261-1e4c-bbac-b98f50584822++6123"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrLeann\/LQBaseProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AC286D9662B25909AABBC2A025351F542C1FFFFA"
+    }
+  ]
+}

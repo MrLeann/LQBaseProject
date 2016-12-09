@@ -27,7 +27,7 @@
 #import "CheckVersionViewController.h"//检测版本更新
 #import "KeyBoardViewController.h"//键盘下移
 #import "CitySelectTableViewController.h"//城市选择器
-
+#import "FaceRecognizerVC.h"//人脸识别
 
 @interface FisrtViewController ()<UITableViewDelegate,UITableViewDataSource>{
     
@@ -60,7 +60,9 @@
     self.vTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     //
-    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - 密码输入框",@"13 - 输入框",@"14 - 仿网易类型左右滑动",@"15 - 弹出框View",@"16 - 获取图片尺寸",@"17 -表格头部刷新动画",@"18 - 类似微博提示框",@"19 - HTML应用",@"20- 检测版本更新",@"21 - 键盘下移",@"22 - 城市选择器",@"23 - 占位"];
+    self.listTitleArr = @[@"1 - 二维码扫描",@"2 - 二维码条形码生成",@"3 -cell滑动删除 ",@"4 -手势解锁",@"5 -图片按钮布局",@"6 -插入图片",@"7 -水波动画",@"8 - K线图 ",@"9 - TableView常见效果",@"10 - 国家区号选择",@"11 - 下拉列表",@"12 - 密码输入框",@"13 - 输入框",@"14 - 仿网易类型左右滑动",@"15 - 弹出框View",@"16 - 获取图片尺寸",@"17 -表格头部刷新动画",@"18 - 类似微博提示框",@"19 - HTML应用",@"20- 检测版本更新",@"21 - 键盘下移",@"22 - 城市选择器",@"23 - 人脸识别"];
+    
+    
     
     //高度设置
     self.vTableView.rowHeight = 40;
@@ -200,13 +202,13 @@
         CitySelectTableViewController *vc = [CitySelectTableViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 22){
-        //占位
         
-    
+        //人脸识别
+        FaceRecognizerVC *vc = [FaceRecognizerVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
-    
-    
 }
+
 
 @end
 

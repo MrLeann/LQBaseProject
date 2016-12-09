@@ -1,23 +1,22 @@
-//  CitySelectTableViewController.m
+//  FaceRecognizerVC.m
 //  LQBaseProject
-//  Created by YZR on 16/12/3.
+//  Created by YZR on 16/12/8.
 //  Copyright © 2016年 YZR. All rights reserved.
 
-#import "CitySelectTableViewController.h"
-#import "SelectProvinceDemoVC.h"
-#import "SecondarySelectCityVC.h"//
-#import "DateSelectVC.h"//日期选择
+#import "FaceRecognizerVC.h"
+#import "FaceClipVC.h"// 人脸截取
+#import "GetFaceDataViewController.h"//脸部数据获取
 
-
-@interface CitySelectTableViewController (){
+@interface FaceRecognizerVC(){
+    
     NSArray *_titleArray;
 }
 
 @end
 
-@implementation CitySelectTableViewController
+@implementation FaceRecognizerVC
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     [self mInitData];
@@ -28,15 +27,13 @@
     //
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _titleArray = @[@"1- Josn数据",@"2 - 二级联动Demo",@"3 - 日期选择器",@"4 - "];
+    _titleArray = @[@"1- 人脸截取",@"2 - 脸部数据获取",@"3 ",@"4 - "];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
 }
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
@@ -46,38 +43,37 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    //
-    cell.textLabel.text = _titleArray[indexPath.row];
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = _titleArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 #pragma mark - cell点击
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0){
+    
+    if(indexPath.row == 0){
         
-        SelectProvinceDemoVC *vc = [SelectProvinceDemoVC new];
+        //脸部截取
+        FaceClipVC *vc = [FaceClipVC new];
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 1){
-        SecondarySelectCityVC *vc = [SecondarySelectCityVC new];
+        
+        //脸部分析
+        GetFaceDataViewController *vc = [GetFaceDataViewController new];
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 2){
-    
-        DateSelectVC *vc = [DateSelectVC new];
-        [self.navigationController pushViewController:vc animated:YES];
+        
+        //
+//        DateSelectVC *vc = [DateSelectVC new];
+//        [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 3){
-        
-        
         
     }
 }
 
 @end
-
-
